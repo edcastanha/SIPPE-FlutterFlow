@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "879632520696",
+    "firebase_url": "https://facepresentrealtime-default-rtdb.firebaseio.com",
+    "project_id": "facepresentrealtime",
+    "storage_bucket": "facepresentrealtime.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:879632520696:android:7154f1f1dd3925640f720d",
+        "android_client_info": {
+          "package_name": "br.com.grupogeld.sippe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "879632520696-obda0oef15jcqvfmrhu9mo7edd0hrhfp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.grupogeld.sippe",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "879632520696-ql4u6bqrmsrqtvp4n88u409h796cj8rf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjLCd7ym3tiVLmEGNgDO17FaYXCjtNpG0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "879632520696-2e5r54dpnpef6hhh6qoq6v8kuph129s7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "879632520696-co9aif5m9kj4s36bs8q02h2tg7g2fv6s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.grupogeld.sippe"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
