@@ -136,6 +136,8 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget>
           !anim.applyInitialState),
       this,
     );
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

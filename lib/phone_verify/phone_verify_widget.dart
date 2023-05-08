@@ -27,6 +27,8 @@ class _PhoneVerifyWidgetState extends State<PhoneVerifyWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => PhoneVerifyModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

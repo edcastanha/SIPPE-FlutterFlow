@@ -31,6 +31,7 @@ class _SignInWidgetState extends State<SignInWidget> {
 
     _model.emailAddressController ??= TextEditingController();
     _model.passwordController ??= TextEditingController();
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

@@ -47,7 +47,7 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="docentes" android:host="sippebrasil.com.br" />
+                <data android:scheme="sippe" android:host="grupogeld.com.br" />
             </intent-filter>
 
         </activity>

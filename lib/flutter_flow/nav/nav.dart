@@ -85,19 +85,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'signUp',
               path: 'signUp',
-              requireAuth: true,
               builder: (context, params) => SignUpWidget(),
             ),
             FFRoute(
               name: 'createProfile',
               path: 'createProfile',
-              requireAuth: true,
               builder: (context, params) => CreateProfileWidget(),
             ),
             FFRoute(
               name: 'phoneSignIn',
               path: 'phoneSignIn',
-              requireAuth: true,
               builder: (context, params) => PhoneSignInWidget(),
             ),
             FFRoute(
@@ -109,7 +106,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'phoneVerify',
               path: 'phoneVerify',
-              requireAuth: true,
               builder: (context, params) => PhoneVerifyWidget(),
             ),
             FFRoute(

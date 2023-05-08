@@ -79,6 +79,8 @@ class _CursosWidgetState extends State<CursosWidget>
           !anim.applyInitialState),
       this,
     );
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override

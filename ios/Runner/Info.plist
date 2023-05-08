@@ -37,10 +37,10 @@
         <key>CFBundleTypeRole</key>
         <string>Editor</string>
         <key>CFBundleURLName</key>
-        <string>sippebrasil.com.br</string>
+        <string>grupogeld.com.br</string>
         <key>CFBundleURLSchemes</key>
         <array>
-        <string>docentes</string>
+        <string>sippe</string>
         </array>
         </dict>
     </array>

@@ -31,6 +31,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
 
     _model.emailAddressController ??= TextEditingController();
     _model.passwordController ??= TextEditingController();
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
@@ -287,7 +288,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                     onPressed: () async {
                                       GoRouter.of(context).prepareAuthEvent();
                                       if (_model.passwordController.text !=
-                                          _model.passwordController.text) {
+                                          currentUserEmailVerified.toString()) {
                                         ScaffoldMessenger.of(context)
                                             .showSnackBar(
                                           SnackBar(

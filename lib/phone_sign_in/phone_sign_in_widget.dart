@@ -59,6 +59,8 @@ class _PhoneSignInWidgetState extends State<PhoneSignInWidget>
           !anim.applyInitialState),
       this,
     );
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
   @override
