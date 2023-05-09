@@ -382,18 +382,16 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget>
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          AuthUserStreamWidget(
-                            builder: (context) => ClipRRect(
-                              borderRadius: BorderRadius.circular(40.0),
-                              child: CachedNetworkImage(
-                                imageUrl: valueOrDefault<String>(
-                                  currentUserPhoto,
-                                  'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/onboarding-01-bv872t/assets/fnp38dj9xs3p/app_icon@1x.png',
-                                ),
-                                width: 40.0,
-                                height: 40.0,
-                                fit: BoxFit.cover,
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(40.0),
+                            child: CachedNetworkImage(
+                              imageUrl: valueOrDefault<String>(
+                                currentUserPhoto,
+                                'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/onboarding-01-bv872t/assets/fnp38dj9xs3p/app_icon@1x.png',
                               ),
+                              width: 40.0,
+                              height: 40.0,
+                              fit: BoxFit.cover,
                             ),
                           ),
                           Expanded(
@@ -405,15 +403,13 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget>
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  AuthUserStreamWidget(
-                                    builder: (context) => Text(
-                                      valueOrDefault<String>(
-                                        currentUserDisplayName,
-                                        'NoCodeUI',
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .titleMedium,
+                                  Text(
+                                    valueOrDefault<String>(
+                                      currentUserDisplayName,
+                                      'NoCodeUI',
                                     ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .titleMedium,
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(

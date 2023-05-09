@@ -43,8 +43,6 @@ class _MyAppState extends State<MyApp> {
   late AppStateNotifier _appStateNotifier;
   late GoRouter _router;
 
-  final authUserSub = authenticatedUserStream.listen((_) {});
-
   @override
   void initState() {
     super.initState();
@@ -59,13 +57,6 @@ class _MyAppState extends State<MyApp> {
     );
   }
 
-  @override
-  void dispose() {
-    authUserSub.cancel();
-
-    super.dispose();
-  }
-
   void setLocale(String language) {
     setState(() => _locale = createLocale(language));
   }
@@ -78,7 +69,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'SIPPE Brasil - Docentes',
+      title: 'SIPPE - Brasil',
       localizationsDelegates: [
         FFLocalizationsDelegate(),
         GlobalMaterialLocalizations.delegate,

@@ -435,7 +435,7 @@ class _CursosWidgetState extends State<CursosWidget>
                                                                   ),
                                                             ),
                                                             Text(
-                                                              '[10] Estudantes Presentes',
+                                                              '10 Estudantes Presentes',
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .bodyMedium
@@ -585,16 +585,15 @@ class _CursosWidgetState extends State<CursosWidget>
                                                                           8.0,
                                                                           0.0),
                                                               child: Text(
-                                                                '[26] Estudents',
+                                                                '[21] Estudents',
                                                                 style: FlutterFlowTheme.of(
                                                                         context)
                                                                     .bodyMedium
                                                                     .override(
                                                                       fontFamily:
                                                                           'Outfit',
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .primaryText,
+                                                                      color: Color(
+                                                                          0xFF101213),
                                                                       fontSize:
                                                                           14.0,
                                                                       fontWeight:
@@ -765,7 +764,7 @@ class _CursosWidgetState extends State<CursosWidget>
                                                                       .max,
                                                               children: [
                                                                 Text(
-                                                                  '[39] Estudantes  Presentes',
+                                                                  '42 Estudantes  Presentes',
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
@@ -936,9 +935,8 @@ class _CursosWidgetState extends State<CursosWidget>
                                                                     .override(
                                                                       fontFamily:
                                                                           'Outfit',
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .primaryText,
+                                                                      color: Color(
+                                                                          0xFF101213),
                                                                       fontSize:
                                                                           14.0,
                                                                       fontWeight:
@@ -1024,7 +1022,7 @@ class _CursosWidgetState extends State<CursosWidget>
                                                   .fromSTEB(
                                                       16.0, 0.0, 0.0, 0.0),
                                               child: Text(
-                                                'Lista de  Classes x Agenda',
+                                                'Top Classes',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .headlineSmall,
@@ -1171,7 +1169,7 @@ class _CursosWidgetState extends State<CursosWidget>
                                                                             .start,
                                                                     children: [
                                                                       AutoSizeText(
-                                                                        '[Class Name]',
+                                                                        'Class Name',
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .titleMedium,
                                                                       ),
@@ -1209,7 +1207,7 @@ class _CursosWidgetState extends State<CursosWidget>
                                                               Expanded(
                                                                 flex: 2,
                                                                 child: Text(
-                                                                  'Matemática',
+                                                                  'Design & Education',
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium,
@@ -1269,210 +1267,7 @@ class _CursosWidgetState extends State<CursosWidget>
                                                                             8.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      'Confirmado',
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                FlutterFlowTheme.of(context).bodyMediumFamily,
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).success,
-                                                                            useGoogleFonts:
-                                                                                GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
-                                                                          ),
-                                                                    ),
-                                                                  ),
-                                                                  if (responsiveVisibility(
-                                                                    context:
-                                                                        context,
-                                                                    tablet:
-                                                                        false,
-                                                                    tabletLandscape:
-                                                                        false,
-                                                                    desktop:
-                                                                        false,
-                                                                  ))
-                                                                    Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                                                          0.0,
-                                                                          2.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                                      child:
-                                                                          Text(
-                                                                        dateTimeFormat(
-                                                                          'relative',
-                                                                          getCurrentTimestamp,
-                                                                          locale:
-                                                                              FFLocalizations.of(context).languageCode,
-                                                                        ),
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .bodySmall
-                                                                            .override(
-                                                                              fontFamily: FlutterFlowTheme.of(context).bodySmallFamily,
-                                                                              color: FlutterFlowTheme.of(context).secondaryText,
-                                                                              useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodySmallFamily),
-                                                                            ),
-                                                                      ),
-                                                                    ),
-                                                                ],
-                                                              ),
-                                                            ),
-                                                          ],
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 0.0,
-                                                                0.0, 2.0),
-                                                    child: Container(
-                                                      width: double.infinity,
-                                                      decoration: BoxDecoration(
-                                                        color: FlutterFlowTheme
-                                                                .of(context)
-                                                            .secondaryBackground,
-                                                        boxShadow: [
-                                                          BoxShadow(
-                                                            blurRadius: 0.0,
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .lineColor,
-                                                            offset: Offset(
-                                                                0.0, 1.0),
-                                                          )
-                                                        ],
-                                                      ),
-                                                      child: Padding(
-                                                        padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    12.0,
-                                                                    12.0,
-                                                                    12.0,
-                                                                    12.0),
-                                                        child: Row(
-                                                          mainAxisSize:
-                                                              MainAxisSize.max,
-                                                          children: [
-                                                            Expanded(
-                                                              flex: 2,
-                                                              child: Row(
-                                                                mainAxisSize:
-                                                                    MainAxisSize
-                                                                        .max,
-                                                                children: [
-                                                                  Column(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    crossAxisAlignment:
-                                                                        CrossAxisAlignment
-                                                                            .start,
-                                                                    children: [
-                                                                      AutoSizeText(
-                                                                        '[Classe]',
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .titleMedium,
-                                                                      ),
-                                                                      if (responsiveVisibility(
-                                                                        context:
-                                                                            context,
-                                                                        tabletLandscape:
-                                                                            false,
-                                                                        desktop:
-                                                                            false,
-                                                                      ))
-                                                                        Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
-                                                                              0.0,
-                                                                              2.0,
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              Text(
-                                                                            'Design & Education',
-                                                                            style:
-                                                                                FlutterFlowTheme.of(context).bodySmall,
-                                                                          ),
-                                                                        ),
-                                                                    ],
-                                                                  ),
-                                                                ],
-                                                              ),
-                                                            ),
-                                                            if (responsiveVisibility(
-                                                              context: context,
-                                                              phone: false,
-                                                              tablet: false,
-                                                            ))
-                                                              Expanded(
-                                                                flex: 2,
-                                                                child: Text(
-                                                                  'Fisíca',
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium,
-                                                                ),
-                                                              ),
-                                                            if (responsiveVisibility(
-                                                              context: context,
-                                                              phone: false,
-                                                            ))
-                                                              Expanded(
-                                                                child: Text(
-                                                                  dateTimeFormat(
-                                                                    'MEd',
-                                                                    getCurrentTimestamp,
-                                                                    locale: FFLocalizations.of(
-                                                                            context)
-                                                                        .languageCode,
-                                                                  ),
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium,
-                                                                ),
-                                                              ),
-                                                            if (responsiveVisibility(
-                                                              context: context,
-                                                              phone: false,
-                                                              tablet: false,
-                                                            ))
-                                                              Expanded(
-                                                                child: Text(
-                                                                  dateTimeFormat(
-                                                                    'relative',
-                                                                    getCurrentTimestamp,
-                                                                    locale: FFLocalizations.of(
-                                                                            context)
-                                                                        .languageCode,
-                                                                  ),
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium,
-                                                                ),
-                                                              ),
-                                                            Expanded(
-                                                              child: Column(
-                                                                mainAxisSize:
-                                                                    MainAxisSize
-                                                                        .max,
-                                                                crossAxisAlignment:
-                                                                    CrossAxisAlignment
-                                                                        .end,
-                                                                children: [
-                                                                  Padding(
-                                                                    padding: EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            0.0,
-                                                                            0.0,
-                                                                            8.0,
-                                                                            0.0),
-                                                                    child: Text(
-                                                                      '[Cancelada]',
+                                                                      'Active',
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium
@@ -1615,7 +1410,7 @@ class _CursosWidgetState extends State<CursosWidget>
                                                               Expanded(
                                                                 flex: 2,
                                                                 child: Text(
-                                                                  'Matemática Basica I',
+                                                                  'Design & Education',
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium,
@@ -1675,7 +1470,7 @@ class _CursosWidgetState extends State<CursosWidget>
                                                                             8.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      '[Reagendada]',
+                                                                      'Active',
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium
@@ -1683,7 +1478,210 @@ class _CursosWidgetState extends State<CursosWidget>
                                                                             fontFamily:
                                                                                 FlutterFlowTheme.of(context).bodyMediumFamily,
                                                                             color:
-                                                                                FlutterFlowTheme.of(context).info,
+                                                                                FlutterFlowTheme.of(context).primary,
+                                                                            useGoogleFonts:
+                                                                                GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
+                                                                          ),
+                                                                    ),
+                                                                  ),
+                                                                  if (responsiveVisibility(
+                                                                    context:
+                                                                        context,
+                                                                    tablet:
+                                                                        false,
+                                                                    tabletLandscape:
+                                                                        false,
+                                                                    desktop:
+                                                                        false,
+                                                                  ))
+                                                                    Padding(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          0.0,
+                                                                          2.0,
+                                                                          0.0,
+                                                                          0.0),
+                                                                      child:
+                                                                          Text(
+                                                                        dateTimeFormat(
+                                                                          'relative',
+                                                                          getCurrentTimestamp,
+                                                                          locale:
+                                                                              FFLocalizations.of(context).languageCode,
+                                                                        ),
+                                                                        style: FlutterFlowTheme.of(context)
+                                                                            .bodySmall
+                                                                            .override(
+                                                                              fontFamily: FlutterFlowTheme.of(context).bodySmallFamily,
+                                                                              color: FlutterFlowTheme.of(context).secondaryText,
+                                                                              useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodySmallFamily),
+                                                                            ),
+                                                                      ),
+                                                                    ),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(0.0, 0.0,
+                                                                0.0, 2.0),
+                                                    child: Container(
+                                                      width: double.infinity,
+                                                      decoration: BoxDecoration(
+                                                        color: FlutterFlowTheme
+                                                                .of(context)
+                                                            .secondaryBackground,
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            blurRadius: 0.0,
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .lineColor,
+                                                            offset: Offset(
+                                                                0.0, 1.0),
+                                                          )
+                                                        ],
+                                                      ),
+                                                      child: Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                                    12.0,
+                                                                    12.0,
+                                                                    12.0,
+                                                                    12.0),
+                                                        child: Row(
+                                                          mainAxisSize:
+                                                              MainAxisSize.max,
+                                                          children: [
+                                                            Expanded(
+                                                              flex: 2,
+                                                              child: Row(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                children: [
+                                                                  Column(
+                                                                    mainAxisSize:
+                                                                        MainAxisSize
+                                                                            .max,
+                                                                    crossAxisAlignment:
+                                                                        CrossAxisAlignment
+                                                                            .start,
+                                                                    children: [
+                                                                      AutoSizeText(
+                                                                        'Custom Name',
+                                                                        style: FlutterFlowTheme.of(context)
+                                                                            .titleMedium,
+                                                                      ),
+                                                                      if (responsiveVisibility(
+                                                                        context:
+                                                                            context,
+                                                                        tabletLandscape:
+                                                                            false,
+                                                                        desktop:
+                                                                            false,
+                                                                      ))
+                                                                        Padding(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                              0.0,
+                                                                              2.0,
+                                                                              0.0,
+                                                                              0.0),
+                                                                          child:
+                                                                              Text(
+                                                                            'Design & Education',
+                                                                            style:
+                                                                                FlutterFlowTheme.of(context).bodySmall,
+                                                                          ),
+                                                                        ),
+                                                                    ],
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                            if (responsiveVisibility(
+                                                              context: context,
+                                                              phone: false,
+                                                              tablet: false,
+                                                            ))
+                                                              Expanded(
+                                                                flex: 2,
+                                                                child: Text(
+                                                                  'Design & Education',
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium,
+                                                                ),
+                                                              ),
+                                                            if (responsiveVisibility(
+                                                              context: context,
+                                                              phone: false,
+                                                            ))
+                                                              Expanded(
+                                                                child: Text(
+                                                                  dateTimeFormat(
+                                                                    'MEd',
+                                                                    getCurrentTimestamp,
+                                                                    locale: FFLocalizations.of(
+                                                                            context)
+                                                                        .languageCode,
+                                                                  ),
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium,
+                                                                ),
+                                                              ),
+                                                            if (responsiveVisibility(
+                                                              context: context,
+                                                              phone: false,
+                                                              tablet: false,
+                                                            ))
+                                                              Expanded(
+                                                                child: Text(
+                                                                  dateTimeFormat(
+                                                                    'relative',
+                                                                    getCurrentTimestamp,
+                                                                    locale: FFLocalizations.of(
+                                                                            context)
+                                                                        .languageCode,
+                                                                  ),
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium,
+                                                                ),
+                                                              ),
+                                                            Expanded(
+                                                              child: Column(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                crossAxisAlignment:
+                                                                    CrossAxisAlignment
+                                                                        .end,
+                                                                children: [
+                                                                  Padding(
+                                                                    padding: EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            0.0,
+                                                                            8.0,
+                                                                            0.0),
+                                                                    child: Text(
+                                                                      'Active',
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                FlutterFlowTheme.of(context).bodyMediumFamily,
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).primary,
                                                                             useGoogleFonts:
                                                                                 GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                           ),
