@@ -83,6 +83,13 @@ class _$UsersRecordSerializer implements StructuredSerializer<UsersRecord> {
             specifiedType: const FullType(
                 DocumentReference, const [const FullType.nullable(Object)])));
     }
+    value = object.ra;
+    if (value != null) {
+      result
+        ..add('ra')
+        ..add(serializers.serialize(value,
+            specifiedType: const FullType(String)));
+    }
     value = object.ffRef;
     if (value != null) {
       result
@@ -143,6 +150,10 @@ class _$UsersRecordSerializer implements StructuredSerializer<UsersRecord> {
                 const FullType.nullable(Object)
               ])) as DocumentReference<Object?>?;
           break;
+        case 'ra':
+          result.ra = serializers.deserialize(value,
+              specifiedType: const FullType(String)) as String?;
+          break;
         case 'Document__Reference__Field':
           result.ffRef = serializers.deserialize(value,
               specifiedType: const FullType(DocumentReference, const [
@@ -176,6 +187,8 @@ class _$UsersRecord extends UsersRecord {
   @override
   final DocumentReference<Object?>? perfil;
   @override
+  final String? ra;
+  @override
   final DocumentReference<Object?>? ffRef;
 
   factory _$UsersRecord([void Function(UsersRecordBuilder)? updates]) =>
@@ -191,6 +204,7 @@ class _$UsersRecord extends UsersRecord {
       this.bio,
       this.city,
       this.perfil,
+      this.ra,
       this.ffRef})
       : super._();
 
@@ -214,6 +228,7 @@ class _$UsersRecord extends UsersRecord {
         bio == other.bio &&
         city == other.city &&
         perfil == other.perfil &&
+        ra == other.ra &&
         ffRef == other.ffRef;
   }
 
@@ -229,6 +244,7 @@ class _$UsersRecord extends UsersRecord {
     _$hash = $jc(_$hash, bio.hashCode);
     _$hash = $jc(_$hash, city.hashCode);
     _$hash = $jc(_$hash, perfil.hashCode);
+    _$hash = $jc(_$hash, ra.hashCode);
     _$hash = $jc(_$hash, ffRef.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -246,6 +262,7 @@ class _$UsersRecord extends UsersRecord {
           ..add('bio', bio)
           ..add('city', city)
           ..add('perfil', perfil)
+          ..add('ra', ra)
           ..add('ffRef', ffRef))
         .toString();
   }
@@ -290,6 +307,10 @@ class UsersRecordBuilder implements Builder<UsersRecord, UsersRecordBuilder> {
   DocumentReference<Object?>? get perfil => _$this._perfil;
   set perfil(DocumentReference<Object?>? perfil) => _$this._perfil = perfil;
 
+  String? _ra;
+  String? get ra => _$this._ra;
+  set ra(String? ra) => _$this._ra = ra;
+
   DocumentReference<Object?>? _ffRef;
   DocumentReference<Object?>? get ffRef => _$this._ffRef;
   set ffRef(DocumentReference<Object?>? ffRef) => _$this._ffRef = ffRef;
@@ -310,6 +331,7 @@ class UsersRecordBuilder implements Builder<UsersRecord, UsersRecordBuilder> {
       _bio = $v.bio;
       _city = $v.city;
       _perfil = $v.perfil;
+      _ra = $v.ra;
       _ffRef = $v.ffRef;
       _$v = null;
     }
@@ -342,6 +364,7 @@ class UsersRecordBuilder implements Builder<UsersRecord, UsersRecordBuilder> {
             bio: bio,
             city: city,
             perfil: perfil,
+            ra: ra,
             ffRef: ffRef);
     replace(_$result);
     return _$result;

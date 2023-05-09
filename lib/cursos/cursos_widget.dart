@@ -7,6 +7,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
@@ -406,14 +407,14 @@ class _CursosWidgetState extends State<CursosWidget>
                                                                       0.0, 0.0),
                                                               child: Icon(
                                                                 Icons
-                                                                    .desktop_windows,
+                                                                    .filter_1_sharp,
                                                                 color: Colors
                                                                     .white,
                                                                 size: 20.0,
                                                               ),
                                                             ),
                                                             Text(
-                                                              '1ª Ano - Fundamental',
+                                                              '[1ª Ano - Fundamental]',
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .titleMedium
@@ -434,7 +435,7 @@ class _CursosWidgetState extends State<CursosWidget>
                                                                   ),
                                                             ),
                                                             Text(
-                                                              '10 Estudantes Presentes',
+                                                              '[10] Estudantes Presentes',
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .bodyMedium
@@ -466,130 +467,148 @@ class _CursosWidgetState extends State<CursosWidget>
                                                                   12.0,
                                                                   12.0,
                                                                   0.0),
-                                                      child: Row(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceBetween,
-                                                        children: [
-                                                          Container(
-                                                            width: 150.0,
-                                                            child: Stack(
-                                                              alignment:
-                                                                  AlignmentDirectional(
-                                                                      -1.0,
-                                                                      0.0),
-                                                              children: [
-                                                                Align(
-                                                                  alignment:
-                                                                      AlignmentDirectional(
-                                                                          -0.91,
-                                                                          0.0),
-                                                                  child:
-                                                                      Container(
-                                                                    width: 28.0,
-                                                                    height:
-                                                                        28.0,
-                                                                    clipBehavior:
-                                                                        Clip.antiAlias,
-                                                                    decoration:
-                                                                        BoxDecoration(
-                                                                      shape: BoxShape
-                                                                          .circle,
-                                                                    ),
-                                                                    child: Image
-                                                                        .network(
-                                                                      'https://images.unsplash.com/photo-1610737241336-371badac3b66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fHVzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
-                                                                      fit: BoxFit
-                                                                          .fitWidth,
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                                Align(
-                                                                  alignment:
-                                                                      AlignmentDirectional(
-                                                                          -0.62,
-                                                                          0.0),
-                                                                  child:
-                                                                      Container(
-                                                                    width: 28.0,
-                                                                    height:
-                                                                        28.0,
-                                                                    clipBehavior:
-                                                                        Clip.antiAlias,
-                                                                    decoration:
-                                                                        BoxDecoration(
-                                                                      shape: BoxShape
-                                                                          .circle,
-                                                                    ),
-                                                                    child: Image
-                                                                        .network(
-                                                                      'https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDJ8fHVzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
-                                                                      fit: BoxFit
-                                                                          .fitWidth,
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                                Align(
-                                                                  alignment:
-                                                                      AlignmentDirectional(
-                                                                          -0.35,
-                                                                          0.0),
-                                                                  child:
-                                                                      Container(
-                                                                    width: 28.0,
-                                                                    height:
-                                                                        28.0,
-                                                                    clipBehavior:
-                                                                        Clip.antiAlias,
-                                                                    decoration:
-                                                                        BoxDecoration(
-                                                                      shape: BoxShape
-                                                                          .circle,
-                                                                    ),
-                                                                    child: Image
-                                                                        .network(
-                                                                      'https://images.unsplash.com/photo-1598346762291-aee88549193f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTV8fHVzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
-                                                                      fit: BoxFit
-                                                                          .fitHeight,
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                          Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        0.0,
-                                                                        0.0,
-                                                                        8.0,
+                                                      child: InkWell(
+                                                        splashColor:
+                                                            Colors.transparent,
+                                                        focusColor:
+                                                            Colors.transparent,
+                                                        hoverColor:
+                                                            Colors.transparent,
+                                                        highlightColor:
+                                                            Colors.transparent,
+                                                        onTap: () async {
+                                                          context.pushNamed(
+                                                              'DetalhesAula');
+                                                        },
+                                                        child: Row(
+                                                          mainAxisSize:
+                                                              MainAxisSize.max,
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .spaceBetween,
+                                                          children: [
+                                                            Container(
+                                                              width: 150.0,
+                                                              child: Stack(
+                                                                alignment:
+                                                                    AlignmentDirectional(
+                                                                        -1.0,
                                                                         0.0),
-                                                            child: Text(
-                                                              '21 students',
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .bodyMedium
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        'Outfit',
-                                                                    color: Color(
-                                                                        0xFF101213),
-                                                                    fontSize:
-                                                                        14.0,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .normal,
-                                                                    useGoogleFonts: GoogleFonts
-                                                                            .asMap()
-                                                                        .containsKey(
-                                                                            FlutterFlowTheme.of(context).bodyMediumFamily),
+                                                                children: [
+                                                                  Align(
+                                                                    alignment:
+                                                                        AlignmentDirectional(
+                                                                            -0.91,
+                                                                            0.0),
+                                                                    child:
+                                                                        Container(
+                                                                      width:
+                                                                          28.0,
+                                                                      height:
+                                                                          28.0,
+                                                                      clipBehavior:
+                                                                          Clip.antiAlias,
+                                                                      decoration:
+                                                                          BoxDecoration(
+                                                                        shape: BoxShape
+                                                                            .circle,
+                                                                      ),
+                                                                      child: Image
+                                                                          .network(
+                                                                        'https://images.unsplash.com/photo-1610737241336-371badac3b66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fHVzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
+                                                                        fit: BoxFit
+                                                                            .fitWidth,
+                                                                      ),
+                                                                    ),
                                                                   ),
+                                                                  Align(
+                                                                    alignment:
+                                                                        AlignmentDirectional(
+                                                                            -0.62,
+                                                                            0.0),
+                                                                    child:
+                                                                        Container(
+                                                                      width:
+                                                                          28.0,
+                                                                      height:
+                                                                          28.0,
+                                                                      clipBehavior:
+                                                                          Clip.antiAlias,
+                                                                      decoration:
+                                                                          BoxDecoration(
+                                                                        shape: BoxShape
+                                                                            .circle,
+                                                                      ),
+                                                                      child: Image
+                                                                          .network(
+                                                                        'https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDJ8fHVzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
+                                                                        fit: BoxFit
+                                                                            .fitWidth,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Align(
+                                                                    alignment:
+                                                                        AlignmentDirectional(
+                                                                            -0.35,
+                                                                            0.0),
+                                                                    child:
+                                                                        Container(
+                                                                      width:
+                                                                          28.0,
+                                                                      height:
+                                                                          28.0,
+                                                                      clipBehavior:
+                                                                          Clip.antiAlias,
+                                                                      decoration:
+                                                                          BoxDecoration(
+                                                                        shape: BoxShape
+                                                                            .circle,
+                                                                      ),
+                                                                      child: Image
+                                                                          .network(
+                                                                        'https://images.unsplash.com/photo-1598346762291-aee88549193f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTV8fHVzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
+                                                                        fit: BoxFit
+                                                                            .fitHeight,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
                                                             ),
-                                                          ),
-                                                        ],
+                                                            Padding(
+                                                              padding:
+                                                                  EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          0.0,
+                                                                          0.0,
+                                                                          8.0,
+                                                                          0.0),
+                                                              child: Text(
+                                                                '[26] Estudents',
+                                                                style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Outfit',
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primaryText,
+                                                                      fontSize:
+                                                                          14.0,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .normal,
+                                                                      useGoogleFonts: GoogleFonts
+                                                                              .asMap()
+                                                                          .containsKey(
+                                                                              FlutterFlowTheme.of(context).bodyMediumFamily),
+                                                                    ),
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
                                                       ),
                                                     ),
                                                     Padding(
@@ -713,15 +732,14 @@ class _CursosWidgetState extends State<CursosWidget>
                                                                   AlignmentDirectional(
                                                                       0.0, 0.0),
                                                               child: Icon(
-                                                                Icons
-                                                                    .code_rounded,
+                                                                Icons.filter_2,
                                                                 color: Colors
                                                                     .white,
                                                                 size: 20.0,
                                                               ),
                                                             ),
                                                             Text(
-                                                              '2º Ano - Médio',
+                                                              '[2º Ano - Médio]',
                                                               style: FlutterFlowTheme
                                                                       .of(context)
                                                                   .titleMedium
@@ -747,7 +765,7 @@ class _CursosWidgetState extends State<CursosWidget>
                                                                       .max,
                                                               children: [
                                                                 Text(
-                                                                  '42 Estudantes  Presentes',
+                                                                  '[39] Estudantes  Presentes',
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
@@ -778,130 +796,163 @@ class _CursosWidgetState extends State<CursosWidget>
                                                                   12.0,
                                                                   12.0,
                                                                   0.0),
-                                                      child: Row(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .spaceBetween,
-                                                        children: [
-                                                          Container(
-                                                            width: 150.0,
-                                                            child: Stack(
-                                                              alignment:
-                                                                  AlignmentDirectional(
-                                                                      -1.0,
-                                                                      0.0),
-                                                              children: [
-                                                                Align(
-                                                                  alignment:
-                                                                      AlignmentDirectional(
-                                                                          -0.91,
-                                                                          0.0),
-                                                                  child:
-                                                                      Container(
-                                                                    width: 28.0,
-                                                                    height:
-                                                                        28.0,
-                                                                    clipBehavior:
-                                                                        Clip.antiAlias,
-                                                                    decoration:
-                                                                        BoxDecoration(
-                                                                      shape: BoxShape
-                                                                          .circle,
-                                                                    ),
-                                                                    child: Image
-                                                                        .network(
-                                                                      'https://images.unsplash.com/photo-1610737241336-371badac3b66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fHVzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
-                                                                      fit: BoxFit
-                                                                          .fitWidth,
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                                Align(
-                                                                  alignment:
-                                                                      AlignmentDirectional(
-                                                                          -0.62,
-                                                                          0.0),
-                                                                  child:
-                                                                      Container(
-                                                                    width: 28.0,
-                                                                    height:
-                                                                        28.0,
-                                                                    clipBehavior:
-                                                                        Clip.antiAlias,
-                                                                    decoration:
-                                                                        BoxDecoration(
-                                                                      shape: BoxShape
-                                                                          .circle,
-                                                                    ),
-                                                                    child: Image
-                                                                        .network(
-                                                                      'https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDJ8fHVzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
-                                                                      fit: BoxFit
-                                                                          .fitWidth,
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                                Align(
-                                                                  alignment:
-                                                                      AlignmentDirectional(
-                                                                          -0.35,
-                                                                          0.0),
-                                                                  child:
-                                                                      Container(
-                                                                    width: 28.0,
-                                                                    height:
-                                                                        28.0,
-                                                                    clipBehavior:
-                                                                        Clip.antiAlias,
-                                                                    decoration:
-                                                                        BoxDecoration(
-                                                                      shape: BoxShape
-                                                                          .circle,
-                                                                    ),
-                                                                    child: Image
-                                                                        .network(
-                                                                      'https://images.unsplash.com/photo-1598346762291-aee88549193f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTV8fHVzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
-                                                                      fit: BoxFit
-                                                                          .fitHeight,
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                          Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        0.0,
-                                                                        0.0,
-                                                                        8.0,
+                                                      child: InkWell(
+                                                        splashColor:
+                                                            Colors.transparent,
+                                                        focusColor:
+                                                            Colors.transparent,
+                                                        hoverColor:
+                                                            Colors.transparent,
+                                                        highlightColor:
+                                                            Colors.transparent,
+                                                        onTap: () async {
+                                                          context.pushNamed(
+                                                            'DetalhesAula',
+                                                            extra: <String,
+                                                                dynamic>{
+                                                              kTransitionInfoKey:
+                                                                  TransitionInfo(
+                                                                hasTransition:
+                                                                    true,
+                                                                transitionType:
+                                                                    PageTransitionType
+                                                                        .fade,
+                                                                duration: Duration(
+                                                                    milliseconds:
+                                                                        300),
+                                                              ),
+                                                            },
+                                                          );
+                                                        },
+                                                        child: Row(
+                                                          mainAxisSize:
+                                                              MainAxisSize.max,
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .spaceBetween,
+                                                          children: [
+                                                            Container(
+                                                              width: 150.0,
+                                                              child: Stack(
+                                                                alignment:
+                                                                    AlignmentDirectional(
+                                                                        -1.0,
                                                                         0.0),
-                                                            child: Text(
-                                                              '16 students',
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .bodyMedium
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        'Outfit',
-                                                                    color: Color(
-                                                                        0xFF101213),
-                                                                    fontSize:
-                                                                        14.0,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .normal,
-                                                                    useGoogleFonts: GoogleFonts
-                                                                            .asMap()
-                                                                        .containsKey(
-                                                                            FlutterFlowTheme.of(context).bodyMediumFamily),
+                                                                children: [
+                                                                  Align(
+                                                                    alignment:
+                                                                        AlignmentDirectional(
+                                                                            -0.91,
+                                                                            0.0),
+                                                                    child:
+                                                                        Container(
+                                                                      width:
+                                                                          28.0,
+                                                                      height:
+                                                                          28.0,
+                                                                      clipBehavior:
+                                                                          Clip.antiAlias,
+                                                                      decoration:
+                                                                          BoxDecoration(
+                                                                        shape: BoxShape
+                                                                            .circle,
+                                                                      ),
+                                                                      child: Image
+                                                                          .network(
+                                                                        'https://images.unsplash.com/photo-1610737241336-371badac3b66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDV8fHVzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
+                                                                        fit: BoxFit
+                                                                            .fitWidth,
+                                                                      ),
+                                                                    ),
                                                                   ),
+                                                                  Align(
+                                                                    alignment:
+                                                                        AlignmentDirectional(
+                                                                            -0.62,
+                                                                            0.0),
+                                                                    child:
+                                                                        Container(
+                                                                      width:
+                                                                          28.0,
+                                                                      height:
+                                                                          28.0,
+                                                                      clipBehavior:
+                                                                          Clip.antiAlias,
+                                                                      decoration:
+                                                                          BoxDecoration(
+                                                                        shape: BoxShape
+                                                                            .circle,
+                                                                      ),
+                                                                      child: Image
+                                                                          .network(
+                                                                        'https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDJ8fHVzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
+                                                                        fit: BoxFit
+                                                                            .fitWidth,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  Align(
+                                                                    alignment:
+                                                                        AlignmentDirectional(
+                                                                            -0.35,
+                                                                            0.0),
+                                                                    child:
+                                                                        Container(
+                                                                      width:
+                                                                          28.0,
+                                                                      height:
+                                                                          28.0,
+                                                                      clipBehavior:
+                                                                          Clip.antiAlias,
+                                                                      decoration:
+                                                                          BoxDecoration(
+                                                                        shape: BoxShape
+                                                                            .circle,
+                                                                      ),
+                                                                      child: Image
+                                                                          .network(
+                                                                        'https://images.unsplash.com/photo-1598346762291-aee88549193f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTV8fHVzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
+                                                                        fit: BoxFit
+                                                                            .fitHeight,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
                                                             ),
-                                                          ),
-                                                        ],
+                                                            Padding(
+                                                              padding:
+                                                                  EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          0.0,
+                                                                          0.0,
+                                                                          8.0,
+                                                                          0.0),
+                                                              child: Text(
+                                                                '[43] Estudents',
+                                                                style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Outfit',
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primaryText,
+                                                                      fontSize:
+                                                                          14.0,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .normal,
+                                                                      useGoogleFonts: GoogleFonts
+                                                                              .asMap()
+                                                                          .containsKey(
+                                                                              FlutterFlowTheme.of(context).bodyMediumFamily),
+                                                                    ),
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
                                                       ),
                                                     ),
                                                     Padding(
@@ -973,7 +1024,7 @@ class _CursosWidgetState extends State<CursosWidget>
                                                   .fromSTEB(
                                                       16.0, 0.0, 0.0, 0.0),
                                               child: Text(
-                                                'Top Classes',
+                                                'Lista de  Classes x Agenda',
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .headlineSmall,
@@ -1120,7 +1171,7 @@ class _CursosWidgetState extends State<CursosWidget>
                                                                             .start,
                                                                     children: [
                                                                       AutoSizeText(
-                                                                        'Class Name',
+                                                                        '[Class Name]',
                                                                         style: FlutterFlowTheme.of(context)
                                                                             .titleMedium,
                                                                       ),
@@ -1158,7 +1209,7 @@ class _CursosWidgetState extends State<CursosWidget>
                                                               Expanded(
                                                                 flex: 2,
                                                                 child: Text(
-                                                                  'Design & Education',
+                                                                  'Matemática',
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium,
@@ -1218,7 +1269,210 @@ class _CursosWidgetState extends State<CursosWidget>
                                                                             8.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      'Active',
+                                                                      'Confirmado',
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                FlutterFlowTheme.of(context).bodyMediumFamily,
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).success,
+                                                                            useGoogleFonts:
+                                                                                GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
+                                                                          ),
+                                                                    ),
+                                                                  ),
+                                                                  if (responsiveVisibility(
+                                                                    context:
+                                                                        context,
+                                                                    tablet:
+                                                                        false,
+                                                                    tabletLandscape:
+                                                                        false,
+                                                                    desktop:
+                                                                        false,
+                                                                  ))
+                                                                    Padding(
+                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                          0.0,
+                                                                          2.0,
+                                                                          0.0,
+                                                                          0.0),
+                                                                      child:
+                                                                          Text(
+                                                                        dateTimeFormat(
+                                                                          'relative',
+                                                                          getCurrentTimestamp,
+                                                                          locale:
+                                                                              FFLocalizations.of(context).languageCode,
+                                                                        ),
+                                                                        style: FlutterFlowTheme.of(context)
+                                                                            .bodySmall
+                                                                            .override(
+                                                                              fontFamily: FlutterFlowTheme.of(context).bodySmallFamily,
+                                                                              color: FlutterFlowTheme.of(context).secondaryText,
+                                                                              useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodySmallFamily),
+                                                                            ),
+                                                                      ),
+                                                                    ),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(0.0, 0.0,
+                                                                0.0, 2.0),
+                                                    child: Container(
+                                                      width: double.infinity,
+                                                      decoration: BoxDecoration(
+                                                        color: FlutterFlowTheme
+                                                                .of(context)
+                                                            .secondaryBackground,
+                                                        boxShadow: [
+                                                          BoxShadow(
+                                                            blurRadius: 0.0,
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .lineColor,
+                                                            offset: Offset(
+                                                                0.0, 1.0),
+                                                          )
+                                                        ],
+                                                      ),
+                                                      child: Padding(
+                                                        padding:
+                                                            EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                                    12.0,
+                                                                    12.0,
+                                                                    12.0,
+                                                                    12.0),
+                                                        child: Row(
+                                                          mainAxisSize:
+                                                              MainAxisSize.max,
+                                                          children: [
+                                                            Expanded(
+                                                              flex: 2,
+                                                              child: Row(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                children: [
+                                                                  Column(
+                                                                    mainAxisSize:
+                                                                        MainAxisSize
+                                                                            .max,
+                                                                    crossAxisAlignment:
+                                                                        CrossAxisAlignment
+                                                                            .start,
+                                                                    children: [
+                                                                      AutoSizeText(
+                                                                        '[Classe]',
+                                                                        style: FlutterFlowTheme.of(context)
+                                                                            .titleMedium,
+                                                                      ),
+                                                                      if (responsiveVisibility(
+                                                                        context:
+                                                                            context,
+                                                                        tabletLandscape:
+                                                                            false,
+                                                                        desktop:
+                                                                            false,
+                                                                      ))
+                                                                        Padding(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                              0.0,
+                                                                              2.0,
+                                                                              0.0,
+                                                                              0.0),
+                                                                          child:
+                                                                              Text(
+                                                                            'Design & Education',
+                                                                            style:
+                                                                                FlutterFlowTheme.of(context).bodySmall,
+                                                                          ),
+                                                                        ),
+                                                                    ],
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ),
+                                                            if (responsiveVisibility(
+                                                              context: context,
+                                                              phone: false,
+                                                              tablet: false,
+                                                            ))
+                                                              Expanded(
+                                                                flex: 2,
+                                                                child: Text(
+                                                                  'Fisíca',
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium,
+                                                                ),
+                                                              ),
+                                                            if (responsiveVisibility(
+                                                              context: context,
+                                                              phone: false,
+                                                            ))
+                                                              Expanded(
+                                                                child: Text(
+                                                                  dateTimeFormat(
+                                                                    'MEd',
+                                                                    getCurrentTimestamp,
+                                                                    locale: FFLocalizations.of(
+                                                                            context)
+                                                                        .languageCode,
+                                                                  ),
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium,
+                                                                ),
+                                                              ),
+                                                            if (responsiveVisibility(
+                                                              context: context,
+                                                              phone: false,
+                                                              tablet: false,
+                                                            ))
+                                                              Expanded(
+                                                                child: Text(
+                                                                  dateTimeFormat(
+                                                                    'relative',
+                                                                    getCurrentTimestamp,
+                                                                    locale: FFLocalizations.of(
+                                                                            context)
+                                                                        .languageCode,
+                                                                  ),
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium,
+                                                                ),
+                                                              ),
+                                                            Expanded(
+                                                              child: Column(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                crossAxisAlignment:
+                                                                    CrossAxisAlignment
+                                                                        .end,
+                                                                children: [
+                                                                  Padding(
+                                                                    padding: EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            0.0,
+                                                                            8.0,
+                                                                            0.0),
+                                                                    child: Text(
+                                                                      '[Cancelada]',
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium
@@ -1361,7 +1615,7 @@ class _CursosWidgetState extends State<CursosWidget>
                                                               Expanded(
                                                                 flex: 2,
                                                                 child: Text(
-                                                                  'Design & Education',
+                                                                  'Matemática Basica I',
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium,
@@ -1421,7 +1675,7 @@ class _CursosWidgetState extends State<CursosWidget>
                                                                             8.0,
                                                                             0.0),
                                                                     child: Text(
-                                                                      'Active',
+                                                                      '[Reagendada]',
                                                                       style: FlutterFlowTheme.of(
                                                                               context)
                                                                           .bodyMedium
@@ -1429,210 +1683,7 @@ class _CursosWidgetState extends State<CursosWidget>
                                                                             fontFamily:
                                                                                 FlutterFlowTheme.of(context).bodyMediumFamily,
                                                                             color:
-                                                                                FlutterFlowTheme.of(context).primary,
-                                                                            useGoogleFonts:
-                                                                                GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
-                                                                          ),
-                                                                    ),
-                                                                  ),
-                                                                  if (responsiveVisibility(
-                                                                    context:
-                                                                        context,
-                                                                    tablet:
-                                                                        false,
-                                                                    tabletLandscape:
-                                                                        false,
-                                                                    desktop:
-                                                                        false,
-                                                                  ))
-                                                                    Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                                                          0.0,
-                                                                          2.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                                      child:
-                                                                          Text(
-                                                                        dateTimeFormat(
-                                                                          'relative',
-                                                                          getCurrentTimestamp,
-                                                                          locale:
-                                                                              FFLocalizations.of(context).languageCode,
-                                                                        ),
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .bodySmall
-                                                                            .override(
-                                                                              fontFamily: FlutterFlowTheme.of(context).bodySmallFamily,
-                                                                              color: FlutterFlowTheme.of(context).secondaryText,
-                                                                              useGoogleFonts: GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodySmallFamily),
-                                                                            ),
-                                                                      ),
-                                                                    ),
-                                                                ],
-                                                              ),
-                                                            ),
-                                                          ],
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 0.0,
-                                                                0.0, 2.0),
-                                                    child: Container(
-                                                      width: double.infinity,
-                                                      decoration: BoxDecoration(
-                                                        color: FlutterFlowTheme
-                                                                .of(context)
-                                                            .secondaryBackground,
-                                                        boxShadow: [
-                                                          BoxShadow(
-                                                            blurRadius: 0.0,
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .lineColor,
-                                                            offset: Offset(
-                                                                0.0, 1.0),
-                                                          )
-                                                        ],
-                                                      ),
-                                                      child: Padding(
-                                                        padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    12.0,
-                                                                    12.0,
-                                                                    12.0,
-                                                                    12.0),
-                                                        child: Row(
-                                                          mainAxisSize:
-                                                              MainAxisSize.max,
-                                                          children: [
-                                                            Expanded(
-                                                              flex: 2,
-                                                              child: Row(
-                                                                mainAxisSize:
-                                                                    MainAxisSize
-                                                                        .max,
-                                                                children: [
-                                                                  Column(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    crossAxisAlignment:
-                                                                        CrossAxisAlignment
-                                                                            .start,
-                                                                    children: [
-                                                                      AutoSizeText(
-                                                                        'Custom Name',
-                                                                        style: FlutterFlowTheme.of(context)
-                                                                            .titleMedium,
-                                                                      ),
-                                                                      if (responsiveVisibility(
-                                                                        context:
-                                                                            context,
-                                                                        tabletLandscape:
-                                                                            false,
-                                                                        desktop:
-                                                                            false,
-                                                                      ))
-                                                                        Padding(
-                                                                          padding: EdgeInsetsDirectional.fromSTEB(
-                                                                              0.0,
-                                                                              2.0,
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              Text(
-                                                                            'Design & Education',
-                                                                            style:
-                                                                                FlutterFlowTheme.of(context).bodySmall,
-                                                                          ),
-                                                                        ),
-                                                                    ],
-                                                                  ),
-                                                                ],
-                                                              ),
-                                                            ),
-                                                            if (responsiveVisibility(
-                                                              context: context,
-                                                              phone: false,
-                                                              tablet: false,
-                                                            ))
-                                                              Expanded(
-                                                                flex: 2,
-                                                                child: Text(
-                                                                  'Design & Education',
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium,
-                                                                ),
-                                                              ),
-                                                            if (responsiveVisibility(
-                                                              context: context,
-                                                              phone: false,
-                                                            ))
-                                                              Expanded(
-                                                                child: Text(
-                                                                  dateTimeFormat(
-                                                                    'MEd',
-                                                                    getCurrentTimestamp,
-                                                                    locale: FFLocalizations.of(
-                                                                            context)
-                                                                        .languageCode,
-                                                                  ),
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium,
-                                                                ),
-                                                              ),
-                                                            if (responsiveVisibility(
-                                                              context: context,
-                                                              phone: false,
-                                                              tablet: false,
-                                                            ))
-                                                              Expanded(
-                                                                child: Text(
-                                                                  dateTimeFormat(
-                                                                    'relative',
-                                                                    getCurrentTimestamp,
-                                                                    locale: FFLocalizations.of(
-                                                                            context)
-                                                                        .languageCode,
-                                                                  ),
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium,
-                                                                ),
-                                                              ),
-                                                            Expanded(
-                                                              child: Column(
-                                                                mainAxisSize:
-                                                                    MainAxisSize
-                                                                        .max,
-                                                                crossAxisAlignment:
-                                                                    CrossAxisAlignment
-                                                                        .end,
-                                                                children: [
-                                                                  Padding(
-                                                                    padding: EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            0.0,
-                                                                            0.0,
-                                                                            8.0,
-                                                                            0.0),
-                                                                    child: Text(
-                                                                      'Active',
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                FlutterFlowTheme.of(context).bodyMediumFamily,
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).primary,
+                                                                                FlutterFlowTheme.of(context).info,
                                                                             useGoogleFonts:
                                                                                 GoogleFonts.asMap().containsKey(FlutterFlowTheme.of(context).bodyMediumFamily),
                                                                           ),

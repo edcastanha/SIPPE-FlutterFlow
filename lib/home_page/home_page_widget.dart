@@ -7,6 +7,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
@@ -111,6 +112,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
               wrapWithModel(
                 model: _model.sideBarNavModel,
                 updateCallback: () => setState(() {}),
+                updateOnChange: true,
                 child: SideBarNavWidget(
                   oneBG: FlutterFlowTheme.of(context).secondaryBackground,
                   oneIcon: Icon(
@@ -133,23 +135,27 @@ class _HomePageWidgetState extends State<HomePageWidget>
               child: SingleChildScrollView(
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     if (responsiveVisibility(
                       context: context,
                       tabletLandscape: false,
                       desktop: false,
                     ))
-                      Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
-                        child: Container(
-                          width: double.infinity,
-                          height: 44.0,
-                          decoration: BoxDecoration(
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
-                            borderRadius: BorderRadius.circular(0.0),
-                          ),
+                      Expanded(
+                        child: Align(
                           alignment: AlignmentDirectional(0.0, 0.0),
+                          child: Container(
+                            width: double.infinity,
+                            height: 44.0,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context)
+                                  .primaryBackground,
+                              borderRadius: BorderRadius.circular(0.0),
+                            ),
+                            alignment: AlignmentDirectional(0.0, 0.0),
+                          ),
                         ),
                       ),
                     Padding(
@@ -218,72 +224,66 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Expanded(
-                                        child: Padding(
-                                          padding:
-                                              EdgeInsetsDirectional.fromSTEB(
-                                                  4.0, 4.0, 4.0, 4.0),
-                                          child: Container(
-                                            width: 250.0,
-                                            height: 260.0,
-                                            constraints: BoxConstraints(
-                                              maxWidth: MediaQuery.of(context)
-                                                      .size
-                                                      .width *
-                                                  0.38,
-                                            ),
-                                            decoration: BoxDecoration(
+                                        child: Container(
+                                          height: 290.0,
+                                          constraints: BoxConstraints(
+                                            maxWidth: MediaQuery.of(context)
+                                                    .size
+                                                    .width *
+                                                0.38,
+                                          ),
+                                          decoration: BoxDecoration(
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryBackground,
+                                            borderRadius:
+                                                BorderRadius.circular(16.0),
+                                            border: Border.all(
                                               color:
                                                   FlutterFlowTheme.of(context)
-                                                      .secondaryBackground,
-                                              borderRadius:
-                                                  BorderRadius.circular(16.0),
-                                              border: Border.all(
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .lineColor,
-                                                width: 1.0,
-                                              ),
+                                                      .lineColor,
+                                              width: 1.0,
                                             ),
-                                            alignment:
-                                                AlignmentDirectional(0.0, -1.0),
-                                            child: Padding(
-                                              padding: EdgeInsetsDirectional
-                                                  .fromSTEB(6.0, 6.0, 6.0, 6.0),
-                                              child: Column(
-                                                mainAxisSize: MainAxisSize.max,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.start,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(
-                                                    'Resumo do curso',
+                                          ),
+                                          alignment:
+                                              AlignmentDirectional(0.0, -1.0),
+                                          child: Padding(
+                                            padding:
+                                                EdgeInsetsDirectional.fromSTEB(
+                                                    6.0, 6.0, 6.0, 6.0),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.start,
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                Text(
+                                                  'Resumo do curso',
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .headlineSmall,
+                                                ),
+                                                Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          0.0, 4.0, 0.0, 0.0),
+                                                  child: Text(
+                                                    'Uma visão geral de seus cursos.',
                                                     style: FlutterFlowTheme.of(
                                                             context)
-                                                        .headlineSmall,
+                                                        .bodySmall,
                                                   ),
-                                                  Padding(
+                                                ),
+                                                Expanded(
+                                                  child: Padding(
                                                     padding:
                                                         EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 4.0,
                                                                 0.0, 0.0),
-                                                    child: Text(
-                                                      'Uma visão geral de seus cursos.',
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodySmall,
-                                                    ),
-                                                  ),
-                                                  Expanded(
-                                                    child: Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  4.0,
-                                                                  0.0,
-                                                                  0.0),
+                                                    child:
+                                                        SingleChildScrollView(
+                                                      scrollDirection:
+                                                          Axis.horizontal,
                                                       child: Row(
                                                         mainAxisSize:
                                                             MainAxisSize.max,
@@ -337,12 +337,20 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                   ),
                                                                 ),
                                                               ),
-                                                              Text(
-                                                                'Progresso do curso',
-                                                                maxLines: 2,
-                                                                style: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodySmall,
+                                                              Padding(
+                                                                padding: EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        10.0,
+                                                                        0.0,
+                                                                        10.0,
+                                                                        0.0),
+                                                                child: Text(
+                                                                  'Progresso do curso',
+                                                                  maxLines: 2,
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodySmall,
+                                                                ),
                                                               ),
                                                             ],
                                                           ),
@@ -398,8 +406,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                       ),
                                                     ),
                                                   ),
-                                                ],
-                                              ),
+                                                ),
+                                              ],
                                             ),
                                           ),
                                         ),

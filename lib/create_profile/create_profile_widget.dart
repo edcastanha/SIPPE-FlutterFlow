@@ -8,6 +8,7 @@ import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'create_profile_model.dart';
@@ -313,18 +314,26 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                       padding:
                           EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 12.0),
                       child: FlutterFlowDropDown<String>(
-                        controller: _model.stateValueController ??=
+                        controller: _model.perfilValueController ??=
                             FormFieldController<String>(
-                          _model.stateValue ??= 'Docente',
+                          _model.perfilValue ??= '/perfil/Docente',
                         ),
                         options: [
+                          '/perfil/Docente',
+                          '/perfil/Cordenação',
+                          '/perfil/Supervisão',
+                          '/perfil/Supervisão',
+                          '/perfil/Pedagógico'
+                        ],
+                        optionLabels: [
                           'Docente',
                           'Cordenação',
                           'Supervisão',
-                          'Pedagogico'
+                          'Pedagógico',
+                          ''
                         ],
                         onChanged: (val) =>
-                            setState(() => _model.stateValue = val),
+                            setState(() => _model.perfilValue = val),
                         width: double.infinity,
                         height: 56.0,
                         textStyle: FlutterFlowTheme.of(context).bodyMedium,

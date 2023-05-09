@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
 import '../flutter_flow_theme.dart';
@@ -126,11 +127,17 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             ),
             FFRoute(
               name: 'profilePage',
-              path: 'profilePage',
+              path: 'Perfil',
               requireAuth: true,
               builder: (context, params) => params.isEmpty
                   ? NavBarPage(initialPage: 'profilePage')
                   : ProfilePageWidget(),
+            ),
+            FFRoute(
+              name: 'DetalhesAula',
+              path: 'detalhesAula',
+              requireAuth: true,
+              builder: (context, params) => DetalhesAulaWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),
@@ -314,11 +321,14 @@ class FFRoute {
                 )
               : builder(context, ffParams);
           final child = appStateNotifier.loading
-              ? Container(
-                  color: Color(0xFF121926),
-                  child: Image.asset(
-                    'assets/images/splash_dashboard_03@3x.png',
-                    fit: BoxFit.fitHeight,
+              ? Center(
+                  child: SizedBox(
+                    width: 50.0,
+                    height: 50.0,
+                    child: SpinKitCircle(
+                      color: FlutterFlowTheme.of(context).primary,
+                      size: 50.0,
+                    ),
                   ),
                 )
               : page;
@@ -356,5 +366,9 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => TransitionInfo(
+        hasTransition: true,
+        transitionType: PageTransitionType.fade,
+        duration: Duration(milliseconds: 300),
+      );
 }

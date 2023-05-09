@@ -10,7 +10,9 @@ import 'backend/firebase/firebase_config.dart';
 import 'flutter_flow/flutter_flow_theme.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 import 'flutter_flow/internationalization.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'flutter_flow/nav/nav.dart';
 import 'index.dart';
 
@@ -128,48 +130,98 @@ class _NavBarPageState extends State<NavBarPage> {
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
     return Scaffold(
       body: _currentPage ?? tabs[_currentPageName],
+      extendBody: true,
       bottomNavigationBar: Visibility(
         visible: responsiveVisibility(
           context: context,
           tabletLandscape: false,
           desktop: false,
         ),
-        child: BottomNavigationBar(
+        child: FloatingNavbar(
           currentIndex: currentIndex,
           onTap: (i) => setState(() {
             _currentPage = null;
             _currentPageName = tabs.keys.toList()[i];
           }),
           backgroundColor: Colors.white,
-          selectedItemColor: FlutterFlowTheme.of(context).primary,
+          selectedItemColor: Color(0x00000000),
           unselectedItemColor: FlutterFlowTheme.of(context).secondaryText,
-          showSelectedLabels: true,
-          showUnselectedLabels: false,
-          type: BottomNavigationBarType.fixed,
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.bar_chart_rounded,
-                size: 24.0,
+          selectedBackgroundColor: Color(0x00000000),
+          borderRadius: 8.0,
+          itemBorderRadius: 8.0,
+          margin: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+          padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+          width: double.infinity,
+          elevation: 0.0,
+          items: [
+            FloatingNavbarItem(
+              customWidget: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.bar_chart_rounded,
+                    color: currentIndex == 0
+                        ? Color(0x00000000)
+                        : FlutterFlowTheme.of(context).secondaryText,
+                    size: 24.0,
+                  ),
+                  Text(
+                    '•',
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      color: currentIndex == 0
+                          ? Color(0x00000000)
+                          : FlutterFlowTheme.of(context).secondaryText,
+                      fontSize: 11.0,
+                    ),
+                  ),
+                ],
               ),
-              label: '•',
-              tooltip: '',
             ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.school_outlined,
-                size: 24.0,
+            FloatingNavbarItem(
+              customWidget: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.school_outlined,
+                    color: currentIndex == 1
+                        ? Color(0x00000000)
+                        : FlutterFlowTheme.of(context).secondaryText,
+                    size: 24.0,
+                  ),
+                  Text(
+                    '•',
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      color: currentIndex == 1
+                          ? Color(0x00000000)
+                          : FlutterFlowTheme.of(context).secondaryText,
+                      fontSize: 11.0,
+                    ),
+                  ),
+                ],
               ),
-              label: '•',
-              tooltip: '',
             ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.account_circle_outlined,
-                size: 24.0,
+            FloatingNavbarItem(
+              customWidget: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.account_circle_outlined,
+                    color: currentIndex == 2
+                        ? Color(0x00000000)
+                        : FlutterFlowTheme.of(context).secondaryText,
+                    size: 24.0,
+                  ),
+                  Text(
+                    '.',
+                    overflow: TextOverflow.ellipsis,
+                    style: GoogleFonts.getFont(
+                      'Roboto',
+                    ),
+                  ),
+                ],
               ),
-              label: '•',
-              tooltip: '',
             )
           ],
         ),

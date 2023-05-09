@@ -8,6 +8,7 @@ import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
@@ -25,9 +26,9 @@ class CreateProfileModel extends FlutterFlowModel {
   // State field(s) for city widget.
   TextEditingController? cityController;
   String? Function(BuildContext, String?)? cityControllerValidator;
-  // State field(s) for state widget.
-  String? stateValue;
-  FormFieldController<String>? stateValueController;
+  // State field(s) for perfil widget.
+  String? perfilValue;
+  FormFieldController<String>? perfilValueController;
   // State field(s) for myBio widget.
   TextEditingController? myBioController;
   String? Function(BuildContext, String?)? myBioControllerValidator;

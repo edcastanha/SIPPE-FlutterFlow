@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'profile_page_model.dart';
@@ -95,24 +96,29 @@ class _ProfilePageWidgetState extends State<ProfilePageWidget>
               phone: false,
               tablet: false,
             ))
-              wrapWithModel(
-                model: _model.sideBarNavModel,
-                updateCallback: () => setState(() {}),
-                child: SideBarNavWidget(
-                  oneBG: FlutterFlowTheme.of(context).primaryBackground,
-                  oneIcon: Icon(
-                    Icons.bar_chart_rounded,
-                    color: FlutterFlowTheme.of(context).primaryText,
-                  ),
-                  twoBG: FlutterFlowTheme.of(context).primaryBackground,
-                  twoIcon: Icon(
-                    Icons.school_outlined,
-                    color: FlutterFlowTheme.of(context).primaryText,
-                  ),
-                  threeColor: FlutterFlowTheme.of(context).secondaryBackground,
-                  threeIcon: Icon(
-                    Icons.account_circle_outlined,
-                    color: FlutterFlowTheme.of(context).primary,
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 50.0),
+                child: wrapWithModel(
+                  model: _model.sideBarNavModel,
+                  updateCallback: () => setState(() {}),
+                  updateOnChange: true,
+                  child: SideBarNavWidget(
+                    oneBG: FlutterFlowTheme.of(context).primaryBackground,
+                    oneIcon: Icon(
+                      Icons.bar_chart_rounded,
+                      color: FlutterFlowTheme.of(context).primaryText,
+                    ),
+                    twoBG: FlutterFlowTheme.of(context).primaryBackground,
+                    twoIcon: Icon(
+                      Icons.school_outlined,
+                      color: FlutterFlowTheme.of(context).primaryText,
+                    ),
+                    threeColor:
+                        FlutterFlowTheme.of(context).secondaryBackground,
+                    threeIcon: Icon(
+                      Icons.account_circle_outlined,
+                      color: FlutterFlowTheme.of(context).primary,
+                    ),
                   ),
                 ),
               ),

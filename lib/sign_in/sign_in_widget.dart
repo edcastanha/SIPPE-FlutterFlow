@@ -5,6 +5,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -103,6 +104,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                             ),
                             Text(
                               'Bem-vindo!',
+                              textAlign: TextAlign.center,
                               style: FlutterFlowTheme.of(context).displaySmall,
                             ),
                             Padding(
@@ -133,7 +135,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                           labelStyle:
                                               FlutterFlowTheme.of(context)
                                                   .bodySmall,
-                                          hintText: 'Enter your email here...',
+                                          hintText: 'Digite seu e-mail aqui...',
                                           hintStyle:
                                               FlutterFlowTheme.of(context)
                                                   .bodySmall,
@@ -206,7 +208,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                         labelText: 'Senha',
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .bodySmall,
-                                        hintText: 'Enter your email here...',
+                                        hintText: 'Digite sua senha aqui...',
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .bodySmall,
                                         enabledBorder: OutlineInputBorder(

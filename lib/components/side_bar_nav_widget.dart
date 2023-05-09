@@ -6,6 +6,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'side_bar_nav_model.dart';
@@ -150,7 +151,7 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget>
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 270.0,
+      width: 220.0,
       height: double.infinity,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).primaryBackground,
@@ -174,11 +175,15 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget>
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   if (Theme.of(context).brightness == Brightness.light)
-                    Image.asset(
-                      'assets/images/noCode_UI_onLight@3x.png',
-                      width: 130.0,
-                      height: 40.0,
-                      fit: BoxFit.fitWidth,
+                    Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
+                      child: Image.asset(
+                        'assets/images/LogoGELD.PNG',
+                        width: 130.0,
+                        height: 40.0,
+                        fit: BoxFit.fitWidth,
+                      ),
                     ),
                   if (Theme.of(context).brightness == Brightness.dark)
                     Image.asset(
@@ -228,7 +233,16 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget>
                         ),
                         Text(
                           'Dashboard',
-                          style: FlutterFlowTheme.of(context).bodyMedium,
+                          style: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .bodyMediumFamily,
+                                fontWeight: FontWeight.w600,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .bodyMediumFamily),
+                              ),
                         ),
                       ],
                     ),
@@ -274,8 +288,18 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget>
                           child: widget.twoIcon!,
                         ),
                         Text(
-                          'Courses',
-                          style: FlutterFlowTheme.of(context).bodyMedium,
+                          'Classes',
+                          textAlign: TextAlign.center,
+                          style: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .bodyMediumFamily,
+                                fontWeight: FontWeight.w600,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .bodyMediumFamily),
+                              ),
                         ),
                       ],
                     ),
@@ -321,8 +345,17 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget>
                           child: widget.threeIcon!,
                         ),
                         Text(
-                          'Profile',
-                          style: FlutterFlowTheme.of(context).bodyMedium,
+                          'Perfil',
+                          style: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .bodyMediumFamily,
+                                fontWeight: FontWeight.w600,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .bodyMediumFamily),
+                              ),
                         ),
                       ],
                     ),
@@ -344,7 +377,7 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget>
                     ),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 50.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.center,

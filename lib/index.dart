@@ -8,3 +8,4 @@ export '/phone_verify/phone_verify_widget.dart' show PhoneVerifyWidget;
 export '/home_page/home_page_widget.dart' show HomePageWidget;
 export '/cursos/cursos_widget.dart' show CursosWidget;
 export '/profile_page/profile_page_widget.dart' show ProfilePageWidget;
+export '/detalhes_aula/detalhes_aula_widget.dart' show DetalhesAulaWidget;
