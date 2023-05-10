@@ -2,6 +2,7 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/main.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -203,15 +204,14 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget>
                 hoverColor: Colors.transparent,
                 highlightColor: Colors.transparent,
                 onTap: () async {
-                  context.pushNamed(
-                    'homePage',
-                    extra: <String, dynamic>{
-                      kTransitionInfoKey: TransitionInfo(
-                        hasTransition: true,
-                        transitionType: PageTransitionType.fade,
-                        duration: Duration(milliseconds: 0),
-                      ),
-                    },
+                  await Navigator.push(
+                    context,
+                    PageTransition(
+                      type: PageTransitionType.fade,
+                      duration: Duration(milliseconds: 0),
+                      reverseDuration: Duration(milliseconds: 0),
+                      child: NavBarPage(initialPage: 'homePage'),
+                    ),
                   );
                 },
                 child: Container(
@@ -259,15 +259,14 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget>
                 hoverColor: Colors.transparent,
                 highlightColor: Colors.transparent,
                 onTap: () async {
-                  context.pushNamed(
-                    'cursos',
-                    extra: <String, dynamic>{
-                      kTransitionInfoKey: TransitionInfo(
-                        hasTransition: true,
-                        transitionType: PageTransitionType.fade,
-                        duration: Duration(milliseconds: 0),
-                      ),
-                    },
+                  await Navigator.push(
+                    context,
+                    PageTransition(
+                      type: PageTransitionType.fade,
+                      duration: Duration(milliseconds: 0),
+                      reverseDuration: Duration(milliseconds: 0),
+                      child: NavBarPage(initialPage: 'cursos'),
+                    ),
                   );
                 },
                 child: Container(
@@ -316,15 +315,14 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget>
                 hoverColor: Colors.transparent,
                 highlightColor: Colors.transparent,
                 onTap: () async {
-                  context.pushNamed(
-                    'profilePage',
-                    extra: <String, dynamic>{
-                      kTransitionInfoKey: TransitionInfo(
-                        hasTransition: true,
-                        transitionType: PageTransitionType.fade,
-                        duration: Duration(milliseconds: 0),
-                      ),
-                    },
+                  await Navigator.push(
+                    context,
+                    PageTransition(
+                      type: PageTransitionType.fade,
+                      duration: Duration(milliseconds: 0),
+                      reverseDuration: Duration(milliseconds: 0),
+                      child: NavBarPage(initialPage: 'profilePage'),
+                    ),
                   );
                 },
                 child: Container(
@@ -382,16 +380,18 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget>
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(40.0),
-                            child: CachedNetworkImage(
-                              imageUrl: valueOrDefault<String>(
-                                currentUserPhoto,
-                                'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/onboarding-01-bv872t/assets/fnp38dj9xs3p/app_icon@1x.png',
+                          AuthUserStreamWidget(
+                            builder: (context) => ClipRRect(
+                              borderRadius: BorderRadius.circular(40.0),
+                              child: CachedNetworkImage(
+                                imageUrl: valueOrDefault<String>(
+                                  currentUserPhoto,
+                                  'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/onboarding-01-bv872t/assets/fnp38dj9xs3p/app_icon@1x.png',
+                                ),
+                                width: 40.0,
+                                height: 40.0,
+                                fit: BoxFit.cover,
                               ),
-                              width: 40.0,
-                              height: 40.0,
-                              fit: BoxFit.cover,
                             ),
                           ),
                           Expanded(
@@ -403,13 +403,15 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget>
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    valueOrDefault<String>(
-                                      currentUserDisplayName,
-                                      'NoCodeUI',
+                                  AuthUserStreamWidget(
+                                    builder: (context) => Text(
+                                      valueOrDefault<String>(
+                                        currentUserDisplayName,
+                                        'NoCodeUI',
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .titleMedium,
                                     ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .titleMedium,
                                   ),
                                   Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(

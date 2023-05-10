@@ -96,7 +96,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget>
                   size: 30.0,
                 ),
                 onPressed: () async {
-                  context.pop();
+                  Navigator.pop(context);
                 },
               ),
               title: Text(
@@ -153,7 +153,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget>
                                   size: 24.0,
                                 ),
                                 onPressed: () async {
-                                  context.pop();
+                                  Navigator.pop(context);
                                 },
                               ),
                             ),

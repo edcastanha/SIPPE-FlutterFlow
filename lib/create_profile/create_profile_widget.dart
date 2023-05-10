@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import '/flutter_flow/upload_data.dart';
+import '/main.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -415,14 +416,20 @@ class _CreateProfileWidgetState extends State<CreateProfileWidget> {
                             EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
                         child: FFButtonWidget(
                           onPressed: () async {
-                            GoRouter.of(context).prepareAuthEvent();
                             final user =
                                 await authManager.signInWithGoogle(context);
                             if (user == null) {
                               return;
                             }
-
-                            context.pushNamedAuth('homePage', mounted);
+                            await Navigator.push(
+                              context,
+                              PageTransition(
+                                type: PageTransitionType.fade,
+                                duration: Duration(milliseconds: 300),
+                                reverseDuration: Duration(milliseconds: 300),
+                                child: NavBarPage(initialPage: 'homePage'),
+                              ),
+                            );
                           },
                           text: 'Salvar alterações',
                           options: FFButtonOptions(

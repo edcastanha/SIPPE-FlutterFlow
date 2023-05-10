@@ -211,7 +211,7 @@ class _DetalhesAulaWidgetState extends State<DetalhesAulaWidget>
                                     size: 30.0,
                                   ),
                                   onPressed: () async {
-                                    context.pop();
+                                    Navigator.pop(context);
                                   },
                                 ),
                               ),

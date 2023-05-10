@@ -1,8 +1,12 @@
 import '/auth/firebase_auth/auth_util.dart';
+import '/create_profile/create_profile_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/main.dart';
+import '/phone_sign_in/phone_sign_in_widget.dart';
+import '/sign_in/sign_in_widget.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -288,7 +292,6 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                 children: [
                                   FFButtonWidget(
                                     onPressed: () async {
-                                      GoRouter.of(context).prepareAuthEvent();
                                       if (_model.passwordController.text !=
                                           currentUserEmailVerified.toString()) {
                                         ScaffoldMessenger.of(context)
@@ -312,18 +315,15 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                         return;
                                       }
 
-                                      context.pushNamedAuth(
-                                        'createProfile',
-                                        mounted,
-                                        extra: <String, dynamic>{
-                                          kTransitionInfoKey: TransitionInfo(
-                                            hasTransition: true,
-                                            transitionType:
-                                                PageTransitionType.fade,
-                                            duration:
-                                                Duration(milliseconds: 150),
-                                          ),
-                                        },
+                                      await Navigator.push(
+                                        context,
+                                        PageTransition(
+                                          type: PageTransitionType.fade,
+                                          duration: Duration(milliseconds: 150),
+                                          reverseDuration:
+                                              Duration(milliseconds: 150),
+                                          child: CreateProfileWidget(),
+                                        ),
                                       );
                                     },
                                     text: 'Registrar-se',
@@ -396,15 +396,21 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                       size: 16.0,
                                     ),
                                     onPressed: () async {
-                                      GoRouter.of(context).prepareAuthEvent();
                                       final user = await authManager
                                           .signInWithGoogle(context);
                                       if (user == null) {
                                         return;
                                       }
-
-                                      context.pushNamedAuth(
-                                          'createProfile', mounted);
+                                      await Navigator.push(
+                                        context,
+                                        PageTransition(
+                                          type: PageTransitionType.fade,
+                                          duration: Duration(milliseconds: 300),
+                                          reverseDuration:
+                                              Duration(milliseconds: 300),
+                                          child: CreateProfileWidget(),
+                                        ),
+                                      );
                                     },
                                   ),
                                 ),
@@ -424,25 +430,20 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                       size: 16.0,
                                     ),
                                     onPressed: () async {
-                                      GoRouter.of(context).prepareAuthEvent();
                                       final user = await authManager
                                           .signInWithApple(context);
                                       if (user == null) {
                                         return;
                                       }
-
-                                      context.pushNamedAuth(
-                                        'createProfile',
-                                        mounted,
-                                        extra: <String, dynamic>{
-                                          kTransitionInfoKey: TransitionInfo(
-                                            hasTransition: true,
-                                            transitionType:
-                                                PageTransitionType.fade,
-                                            duration:
-                                                Duration(milliseconds: 150),
-                                          ),
-                                        },
+                                      await Navigator.push(
+                                        context,
+                                        PageTransition(
+                                          type: PageTransitionType.fade,
+                                          duration: Duration(milliseconds: 150),
+                                          reverseDuration:
+                                              Duration(milliseconds: 150),
+                                          child: CreateProfileWidget(),
+                                        ),
                                       );
                                     },
                                   ),
@@ -463,9 +464,26 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                       size: 20.0,
                                     ),
                                     onPressed: () async {
-                                      context.pushNamed('phoneSignIn');
-
-                                      context.pushNamed('createProfile');
+                                      await Navigator.push(
+                                        context,
+                                        PageTransition(
+                                          type: PageTransitionType.fade,
+                                          duration: Duration(milliseconds: 300),
+                                          reverseDuration:
+                                              Duration(milliseconds: 300),
+                                          child: PhoneSignInWidget(),
+                                        ),
+                                      );
+                                      await Navigator.push(
+                                        context,
+                                        PageTransition(
+                                          type: PageTransitionType.fade,
+                                          duration: Duration(milliseconds: 300),
+                                          reverseDuration:
+                                              Duration(milliseconds: 300),
+                                          child: CreateProfileWidget(),
+                                        ),
+                                      );
                                     },
                                   ),
                                 ),
@@ -480,7 +498,16 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
-                                  context.pushNamed('signIn');
+                                  await Navigator.push(
+                                    context,
+                                    PageTransition(
+                                      type: PageTransitionType.fade,
+                                      duration: Duration(milliseconds: 300),
+                                      reverseDuration:
+                                          Duration(milliseconds: 300),
+                                      child: SignInWidget(),
+                                    ),
+                                  );
                                 },
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -531,14 +558,23 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                 children: [
                                   FFButtonWidget(
                                     onPressed: () async {
-                                      GoRouter.of(context).prepareAuthEvent();
                                       final user = await authManager
                                           .signInAnonymously(context);
                                       if (user == null) {
                                         return;
                                       }
-
-                                      context.goNamedAuth('homePage', mounted);
+                                      await Navigator.pushAndRemoveUntil(
+                                        context,
+                                        PageTransition(
+                                          type: PageTransitionType.fade,
+                                          duration: Duration(milliseconds: 300),
+                                          reverseDuration:
+                                              Duration(milliseconds: 300),
+                                          child: NavBarPage(
+                                              initialPage: 'homePage'),
+                                        ),
+                                        (r) => false,
+                                      );
                                     },
                                     text: 'Continuar como convidado',
                                     options: FFButtonOptions(
