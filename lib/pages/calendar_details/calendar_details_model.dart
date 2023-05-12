@@ -11,7 +11,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 
-class DetalhesAulaModel extends FlutterFlowModel {
+class CalendarDetailsModel extends FlutterFlowModel {
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for CheckboxListTile widget.

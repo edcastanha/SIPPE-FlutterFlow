@@ -11,19 +11,19 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
-import 'cursos_model.dart';
-export 'cursos_model.dart';
+import 'classes_list_model.dart';
+export 'classes_list_model.dart';
 
-class CursosWidget extends StatefulWidget {
-  const CursosWidget({Key? key}) : super(key: key);
+class ClassesListWidget extends StatefulWidget {
+  const ClassesListWidget({Key? key}) : super(key: key);
 
   @override
-  _CursosWidgetState createState() => _CursosWidgetState();
+  _ClassesListWidgetState createState() => _ClassesListWidgetState();
 }
 
-class _CursosWidgetState extends State<CursosWidget>
+class _ClassesListWidgetState extends State<ClassesListWidget>
     with TickerProviderStateMixin {
-  late CursosModel _model;
+  late ClassesListModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
   final _unfocusNode = FocusNode();
@@ -72,7 +72,7 @@ class _CursosWidgetState extends State<CursosWidget>
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => CursosModel());
+    _model = createModel(context, () => ClassesListModel());
 
     setupAnimations(
       animationsMap.values.where((anim) =>
@@ -478,7 +478,7 @@ class _CursosWidgetState extends State<CursosWidget>
                                                             Colors.transparent,
                                                         onTap: () async {
                                                           context.pushNamed(
-                                                              'DetalhesAula');
+                                                              'CalendarDetails');
                                                         },
                                                         child: Row(
                                                           mainAxisSize:
@@ -730,11 +730,43 @@ class _CursosWidgetState extends State<CursosWidget>
                                                               alignment:
                                                                   AlignmentDirectional(
                                                                       0.0, 0.0),
-                                                              child: Icon(
-                                                                Icons.filter_2,
-                                                                color: Colors
-                                                                    .white,
-                                                                size: 20.0,
+                                                              child: InkWell(
+                                                                splashColor: Colors
+                                                                    .transparent,
+                                                                focusColor: Colors
+                                                                    .transparent,
+                                                                hoverColor: Colors
+                                                                    .transparent,
+                                                                highlightColor:
+                                                                    Colors
+                                                                        .transparent,
+                                                                onTap:
+                                                                    () async {
+                                                                  context
+                                                                      .pushNamed(
+                                                                    'CalendarDetails',
+                                                                    extra: <
+                                                                        String,
+                                                                        dynamic>{
+                                                                      kTransitionInfoKey:
+                                                                          TransitionInfo(
+                                                                        hasTransition:
+                                                                            true,
+                                                                        transitionType:
+                                                                            PageTransitionType.fade,
+                                                                        duration:
+                                                                            Duration(milliseconds: 150),
+                                                                      ),
+                                                                    },
+                                                                  );
+                                                                },
+                                                                child: Icon(
+                                                                  Icons
+                                                                      .filter_2,
+                                                                  color: Colors
+                                                                      .white,
+                                                                  size: 20.0,
+                                                                ),
                                                               ),
                                                             ),
                                                             Text(
@@ -806,7 +838,7 @@ class _CursosWidgetState extends State<CursosWidget>
                                                             Colors.transparent,
                                                         onTap: () async {
                                                           context.pushNamed(
-                                                            'DetalhesAula',
+                                                            'CalendarDetails',
                                                             extra: <String,
                                                                 dynamic>{
                                                               kTransitionInfoKey:

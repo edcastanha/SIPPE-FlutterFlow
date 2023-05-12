@@ -82,6 +82,26 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget>
     'containerOnPageLoadAnimation3': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
+        VisibilityEffect(duration: 100.ms),
+        FadeEffect(
+          curve: Curves.easeInOut,
+          delay: 100.ms,
+          duration: 600.ms,
+          begin: 0.0,
+          end: 1.0,
+        ),
+        MoveEffect(
+          curve: Curves.easeInOut,
+          delay: 100.ms,
+          duration: 600.ms,
+          begin: Offset(0.0, 10.0),
+          end: Offset(0.0, 0.0),
+        ),
+      ],
+    ),
+    'containerOnPageLoadAnimation4': AnimationInfo(
+      trigger: AnimationTrigger.onPageLoad,
+      effects: [
         VisibilityEffect(duration: 200.ms),
         FadeEffect(
           curve: Curves.easeInOut,
@@ -99,7 +119,7 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget>
         ),
       ],
     ),
-    'containerOnPageLoadAnimation4': AnimationInfo(
+    'containerOnPageLoadAnimation5': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
         FadeEffect(
@@ -172,7 +192,7 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget>
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 24.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   if (Theme.of(context).brightness == Brightness.light)
                     Padding(
@@ -187,7 +207,7 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget>
                     ),
                   if (Theme.of(context).brightness == Brightness.dark)
                     Image.asset(
-                      'assets/images/noCode_UI_onDark@3x.png',
+                      'assets/images/LogoGELD.PNG',
                       width: 130.0,
                       height: 40.0,
                       fit: BoxFit.fitWidth,
@@ -232,7 +252,7 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget>
                           child: widget.oneIcon!,
                         ),
                         Text(
-                          'Dashboard',
+                          'Inicio',
                           style: FlutterFlowTheme.of(context)
                               .bodyMedium
                               .override(
@@ -260,7 +280,7 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget>
                 highlightColor: Colors.transparent,
                 onTap: () async {
                   context.pushNamed(
-                    'cursos',
+                    'ClassesList',
                     extra: <String, dynamic>{
                       kTransitionInfoKey: TransitionInfo(
                         hasTransition: true,
@@ -317,6 +337,67 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget>
                 highlightColor: Colors.transparent,
                 onTap: () async {
                   context.pushNamed(
+                    'CalendarDetails',
+                    extra: <String, dynamic>{
+                      kTransitionInfoKey: TransitionInfo(
+                        hasTransition: true,
+                        transitionType: PageTransitionType.fade,
+                        duration: Duration(milliseconds: 0),
+                      ),
+                    },
+                  );
+                },
+                child: Container(
+                  width: double.infinity,
+                  height: 48.0,
+                  decoration: BoxDecoration(
+                    color: widget.twoBG,
+                    borderRadius: BorderRadius.circular(12.0),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(8.0, 4.0, 4.0, 4.0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 12.0, 0.0),
+                          child: Icon(
+                            Icons.perm_contact_cal_outlined,
+                            color: FlutterFlowTheme.of(context).primaryText,
+                            size: 24.0,
+                          ),
+                        ),
+                        Text(
+                          'Aulas',
+                          textAlign: TextAlign.center,
+                          style: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .override(
+                                fontFamily: FlutterFlowTheme.of(context)
+                                    .bodyMediumFamily,
+                                fontWeight: FontWeight.w600,
+                                useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                    FlutterFlowTheme.of(context)
+                                        .bodyMediumFamily),
+                              ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ).animateOnPageLoad(
+                  animationsMap['containerOnPageLoadAnimation3']!),
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
+              child: InkWell(
+                splashColor: Colors.transparent,
+                focusColor: Colors.transparent,
+                hoverColor: Colors.transparent,
+                highlightColor: Colors.transparent,
+                onTap: () async {
+                  context.pushNamed(
                     'profilePage',
                     extra: <String, dynamic>{
                       kTransitionInfoKey: TransitionInfo(
@@ -362,7 +443,7 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget>
                   ),
                 ),
               ).animateOnPageLoad(
-                  animationsMap['containerOnPageLoadAnimation3']!),
+                  animationsMap['containerOnPageLoadAnimation4']!),
             ),
             Expanded(
               child: Column(
@@ -382,18 +463,13 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget>
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          AuthUserStreamWidget(
-                            builder: (context) => ClipRRect(
-                              borderRadius: BorderRadius.circular(40.0),
-                              child: CachedNetworkImage(
-                                imageUrl: valueOrDefault<String>(
-                                  currentUserPhoto,
-                                  'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/onboarding-01-bv872t/assets/fnp38dj9xs3p/app_icon@1x.png',
-                                ),
-                                width: 40.0,
-                                height: 40.0,
-                                fit: BoxFit.cover,
-                              ),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(40.0),
+                            child: Image.asset(
+                              'assets/images/ic_launcher.png',
+                              width: 40.0,
+                              height: 40.0,
+                              fit: BoxFit.cover,
                             ),
                           ),
                           Expanded(
@@ -409,7 +485,7 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget>
                                     builder: (context) => Text(
                                       valueOrDefault<String>(
                                         currentUserDisplayName,
-                                        'NoCodeUI',
+                                        'Nome da Conta',
                                       ),
                                       style: FlutterFlowTheme.of(context)
                                           .titleMedium,
@@ -445,7 +521,7 @@ class _SideBarNavWidgetState extends State<SideBarNavWidget>
                       ),
                     ),
                   ).animateOnPageLoad(
-                      animationsMap['containerOnPageLoadAnimation4']!),
+                      animationsMap['containerOnPageLoadAnimation5']!),
                 ],
               ),
             ),

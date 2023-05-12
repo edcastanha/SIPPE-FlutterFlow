@@ -10,19 +10,19 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
-import 'detalhes_aula_model.dart';
-export 'detalhes_aula_model.dart';
+import 'calendar_details_model.dart';
+export 'calendar_details_model.dart';
 
-class DetalhesAulaWidget extends StatefulWidget {
-  const DetalhesAulaWidget({Key? key}) : super(key: key);
+class CalendarDetailsWidget extends StatefulWidget {
+  const CalendarDetailsWidget({Key? key}) : super(key: key);
 
   @override
-  _DetalhesAulaWidgetState createState() => _DetalhesAulaWidgetState();
+  _CalendarDetailsWidgetState createState() => _CalendarDetailsWidgetState();
 }
 
-class _DetalhesAulaWidgetState extends State<DetalhesAulaWidget>
+class _CalendarDetailsWidgetState extends State<CalendarDetailsWidget>
     with TickerProviderStateMixin {
-  late DetalhesAulaModel _model;
+  late CalendarDetailsModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
   final _unfocusNode = FocusNode();
@@ -147,7 +147,7 @@ class _DetalhesAulaWidgetState extends State<DetalhesAulaWidget>
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => DetalhesAulaModel());
+    _model = createModel(context, () => CalendarDetailsModel());
 
     setupAnimations(
       animationsMap.values.where((anim) =>
@@ -564,7 +564,7 @@ class _DetalhesAulaWidgetState extends State<DetalhesAulaWidget>
                                                                   0.0,
                                                                   0.0),
                                                       child: Text(
-                                                        '2ª - Feira, 10:00am',
+                                                        '2ª - 08/05 às 10:00am',
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -747,7 +747,7 @@ class _DetalhesAulaWidgetState extends State<DetalhesAulaWidget>
                                                                   0.0,
                                                                   0.0),
                                                       child: Text(
-                                                        '4ª - Feira, 10:45am',
+                                                        '4ª - 10 /05 às10:45am',
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -930,7 +930,7 @@ class _DetalhesAulaWidgetState extends State<DetalhesAulaWidget>
                                                                   0.0,
                                                                   0.0),
                                                       child: Text(
-                                                        'Terça-Feira, 10:00am',
+                                                        '3ª - 16/05 às 10:00am',
                                                         style:
                                                             FlutterFlowTheme.of(
                                                                     context)
@@ -1126,7 +1126,7 @@ class _DetalhesAulaWidgetState extends State<DetalhesAulaWidget>
                                                 children: [
                                                   Expanded(
                                                     child: Text(
-                                                      '3ª - Feira, 09:15am',
+                                                      '3ª - 02/05 às 09:15am',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -1296,7 +1296,7 @@ class _DetalhesAulaWidgetState extends State<DetalhesAulaWidget>
                                                 children: [
                                                   Expanded(
                                                     child: Text(
-                                                      '6ª - Feira, 11:15am',
+                                                      '3ª - 02/05 às  11:15am',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -1331,7 +1331,7 @@ class _DetalhesAulaWidgetState extends State<DetalhesAulaWidget>
                                                         AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: Text(
-                                                      'Concluído',
+                                                      'Cancelada',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)
@@ -1466,7 +1466,7 @@ class _DetalhesAulaWidgetState extends State<DetalhesAulaWidget>
                                                 children: [
                                                   Expanded(
                                                     child: Text(
-                                                      '2ª - Feira, 09:15am',
+                                                      '4ª - 04/05  09:15am',
                                                       style:
                                                           FlutterFlowTheme.of(
                                                                   context)

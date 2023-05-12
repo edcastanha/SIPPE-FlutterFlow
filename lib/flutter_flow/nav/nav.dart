@@ -89,30 +89,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => SignInWidget(),
             ),
             FFRoute(
-              name: 'signUp',
-              path: 'signUp',
-              builder: (context, params) => SignUpWidget(),
-            ),
-            FFRoute(
-              name: 'createProfile',
-              path: 'createProfile',
-              builder: (context, params) => CreateProfileWidget(),
-            ),
-            FFRoute(
-              name: 'phoneSignIn',
-              path: 'phoneSignIn',
-              builder: (context, params) => PhoneSignInWidget(),
-            ),
-            FFRoute(
               name: 'forgotPassword',
               path: 'forgotPassword',
               requireAuth: true,
               builder: (context, params) => ForgotPasswordWidget(),
-            ),
-            FFRoute(
-              name: 'phoneVerify',
-              path: 'phoneVerify',
-              builder: (context, params) => PhoneVerifyWidget(),
             ),
             FFRoute(
               name: 'homePage',
@@ -123,12 +103,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   : HomePageWidget(),
             ),
             FFRoute(
-              name: 'cursos',
-              path: 'cursos',
+              name: 'ClassesList',
+              path: 'classesList',
               requireAuth: true,
               builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'cursos')
-                  : CursosWidget(),
+                  ? NavBarPage(initialPage: 'ClassesList')
+                  : ClassesListWidget(),
             ),
             FFRoute(
               name: 'profilePage',
@@ -139,10 +119,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   : ProfilePageWidget(),
             ),
             FFRoute(
-              name: 'DetalhesAula',
-              path: 'detalhesAula',
+              name: 'CalendarDetails',
+              path: 'calendarDetails',
               requireAuth: true,
-              builder: (context, params) => DetalhesAulaWidget(),
+              builder: (context, params) => CalendarDetailsWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ),

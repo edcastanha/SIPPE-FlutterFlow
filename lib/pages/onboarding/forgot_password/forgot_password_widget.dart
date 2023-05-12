@@ -158,7 +158,7 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget>
                               ),
                             ),
                             Text(
-                              'Forgot Password',
+                              'Esqueci minha senha',
                               style: FlutterFlowTheme.of(context).headlineSmall,
                             ),
                           ],

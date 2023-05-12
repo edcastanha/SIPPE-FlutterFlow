@@ -597,7 +597,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                 .start,
                                                         children: [
                                                           Text(
-                                                            'Toal de Estudantes',
+                                                            'Total de Estudantes',
                                                             textAlign:
                                                                 TextAlign.start,
                                                             style: FlutterFlowTheme
