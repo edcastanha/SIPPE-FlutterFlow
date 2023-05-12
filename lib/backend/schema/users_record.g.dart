@@ -61,35 +61,6 @@ class _$UsersRecordSerializer implements StructuredSerializer<UsersRecord> {
         ..add(serializers.serialize(value,
             specifiedType: const FullType(String)));
     }
-    value = object.bio;
-    if (value != null) {
-      result
-        ..add('bio')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.city;
-    if (value != null) {
-      result
-        ..add('city')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
-    value = object.perfil;
-    if (value != null) {
-      result
-        ..add('perfil')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(
-                DocumentReference, const [const FullType.nullable(Object)])));
-    }
-    value = object.ra;
-    if (value != null) {
-      result
-        ..add('ra')
-        ..add(serializers.serialize(value,
-            specifiedType: const FullType(String)));
-    }
     value = object.ffRef;
     if (value != null) {
       result
@@ -136,24 +107,6 @@ class _$UsersRecordSerializer implements StructuredSerializer<UsersRecord> {
           result.phoneNumber = serializers.deserialize(value,
               specifiedType: const FullType(String)) as String?;
           break;
-        case 'bio':
-          result.bio = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
-          break;
-        case 'city':
-          result.city = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
-          break;
-        case 'perfil':
-          result.perfil = serializers.deserialize(value,
-              specifiedType: const FullType(DocumentReference, const [
-                const FullType.nullable(Object)
-              ])) as DocumentReference<Object?>?;
-          break;
-        case 'ra':
-          result.ra = serializers.deserialize(value,
-              specifiedType: const FullType(String)) as String?;
-          break;
         case 'Document__Reference__Field':
           result.ffRef = serializers.deserialize(value,
               specifiedType: const FullType(DocumentReference, const [
@@ -181,14 +134,6 @@ class _$UsersRecord extends UsersRecord {
   @override
   final String? phoneNumber;
   @override
-  final String? bio;
-  @override
-  final String? city;
-  @override
-  final DocumentReference<Object?>? perfil;
-  @override
-  final String? ra;
-  @override
   final DocumentReference<Object?>? ffRef;
 
   factory _$UsersRecord([void Function(UsersRecordBuilder)? updates]) =>
@@ -201,10 +146,6 @@ class _$UsersRecord extends UsersRecord {
       this.uid,
       this.createdTime,
       this.phoneNumber,
-      this.bio,
-      this.city,
-      this.perfil,
-      this.ra,
       this.ffRef})
       : super._();
 
@@ -225,10 +166,6 @@ class _$UsersRecord extends UsersRecord {
         uid == other.uid &&
         createdTime == other.createdTime &&
         phoneNumber == other.phoneNumber &&
-        bio == other.bio &&
-        city == other.city &&
-        perfil == other.perfil &&
-        ra == other.ra &&
         ffRef == other.ffRef;
   }
 
@@ -241,10 +178,6 @@ class _$UsersRecord extends UsersRecord {
     _$hash = $jc(_$hash, uid.hashCode);
     _$hash = $jc(_$hash, createdTime.hashCode);
     _$hash = $jc(_$hash, phoneNumber.hashCode);
-    _$hash = $jc(_$hash, bio.hashCode);
-    _$hash = $jc(_$hash, city.hashCode);
-    _$hash = $jc(_$hash, perfil.hashCode);
-    _$hash = $jc(_$hash, ra.hashCode);
     _$hash = $jc(_$hash, ffRef.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -259,10 +192,6 @@ class _$UsersRecord extends UsersRecord {
           ..add('uid', uid)
           ..add('createdTime', createdTime)
           ..add('phoneNumber', phoneNumber)
-          ..add('bio', bio)
-          ..add('city', city)
-          ..add('perfil', perfil)
-          ..add('ra', ra)
           ..add('ffRef', ffRef))
         .toString();
   }
@@ -295,22 +224,6 @@ class UsersRecordBuilder implements Builder<UsersRecord, UsersRecordBuilder> {
   String? get phoneNumber => _$this._phoneNumber;
   set phoneNumber(String? phoneNumber) => _$this._phoneNumber = phoneNumber;
 
-  String? _bio;
-  String? get bio => _$this._bio;
-  set bio(String? bio) => _$this._bio = bio;
-
-  String? _city;
-  String? get city => _$this._city;
-  set city(String? city) => _$this._city = city;
-
-  DocumentReference<Object?>? _perfil;
-  DocumentReference<Object?>? get perfil => _$this._perfil;
-  set perfil(DocumentReference<Object?>? perfil) => _$this._perfil = perfil;
-
-  String? _ra;
-  String? get ra => _$this._ra;
-  set ra(String? ra) => _$this._ra = ra;
-
   DocumentReference<Object?>? _ffRef;
   DocumentReference<Object?>? get ffRef => _$this._ffRef;
   set ffRef(DocumentReference<Object?>? ffRef) => _$this._ffRef = ffRef;
@@ -328,10 +241,6 @@ class UsersRecordBuilder implements Builder<UsersRecord, UsersRecordBuilder> {
       _uid = $v.uid;
       _createdTime = $v.createdTime;
       _phoneNumber = $v.phoneNumber;
-      _bio = $v.bio;
-      _city = $v.city;
-      _perfil = $v.perfil;
-      _ra = $v.ra;
       _ffRef = $v.ffRef;
       _$v = null;
     }
@@ -361,10 +270,6 @@ class UsersRecordBuilder implements Builder<UsersRecord, UsersRecordBuilder> {
             uid: uid,
             createdTime: createdTime,
             phoneNumber: phoneNumber,
-            bio: bio,
-            city: city,
-            perfil: perfil,
-            ra: ra,
             ffRef: ffRef);
     replace(_$result);
     return _$result;
