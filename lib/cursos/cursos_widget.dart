@@ -1,5 +1,4 @@
 import '/components/side_bar_nav_widget.dart';
-import '/detalhes_aula/detalhes_aula_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -478,23 +477,8 @@ class _CursosWidgetState extends State<CursosWidget>
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          await Navigator.push(
-                                                            context,
-                                                            PageTransition(
-                                                              type:
-                                                                  PageTransitionType
-                                                                      .fade,
-                                                              duration: Duration(
-                                                                  milliseconds:
-                                                                      300),
-                                                              reverseDuration:
-                                                                  Duration(
-                                                                      milliseconds:
-                                                                          300),
-                                                              child:
-                                                                  DetalhesAulaWidget(),
-                                                            ),
-                                                          );
+                                                          context.pushNamed(
+                                                              'DetalhesAula');
                                                         },
                                                         child: Row(
                                                           mainAxisSize:
@@ -821,22 +805,22 @@ class _CursosWidgetState extends State<CursosWidget>
                                                         highlightColor:
                                                             Colors.transparent,
                                                         onTap: () async {
-                                                          await Navigator.push(
-                                                            context,
-                                                            PageTransition(
-                                                              type:
-                                                                  PageTransitionType
-                                                                      .fade,
-                                                              duration: Duration(
-                                                                  milliseconds:
-                                                                      300),
-                                                              reverseDuration:
-                                                                  Duration(
-                                                                      milliseconds:
-                                                                          300),
-                                                              child:
-                                                                  DetalhesAulaWidget(),
-                                                            ),
+                                                          context.pushNamed(
+                                                            'DetalhesAula',
+                                                            extra: <String,
+                                                                dynamic>{
+                                                              kTransitionInfoKey:
+                                                                  TransitionInfo(
+                                                                hasTransition:
+                                                                    true,
+                                                                transitionType:
+                                                                    PageTransitionType
+                                                                        .fade,
+                                                                duration: Duration(
+                                                                    milliseconds:
+                                                                        300),
+                                                              ),
+                                                            },
                                                           );
                                                         },
                                                         child: Row(

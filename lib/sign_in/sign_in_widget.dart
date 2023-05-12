@@ -3,9 +3,6 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/main.dart';
-import '/phone_sign_in/phone_sign_in_widget.dart';
-import '/sign_up/sign_up_widget.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -316,6 +313,8 @@ class _SignInWidgetState extends State<SignInWidget> {
                                   ),
                                   FFButtonWidget(
                                     onPressed: () async {
+                                      GoRouter.of(context).prepareAuthEvent();
+
                                       final user =
                                           await authManager.signInWithEmail(
                                         context,
@@ -326,18 +325,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                         return;
                                       }
 
-                                      await Navigator.pushAndRemoveUntil(
-                                        context,
-                                        PageTransition(
-                                          type: PageTransitionType.fade,
-                                          duration: Duration(milliseconds: 300),
-                                          reverseDuration:
-                                              Duration(milliseconds: 300),
-                                          child: NavBarPage(
-                                              initialPage: 'homePage'),
-                                        ),
-                                        (r) => false,
-                                      );
+                                      context.goNamedAuth('homePage', mounted);
                                     },
                                     text: 'Entrar',
                                     options: FFButtonOptions(
@@ -409,23 +397,14 @@ class _SignInWidgetState extends State<SignInWidget> {
                                       size: 16.0,
                                     ),
                                     onPressed: () async {
+                                      GoRouter.of(context).prepareAuthEvent();
                                       final user = await authManager
                                           .signInWithGoogle(context);
                                       if (user == null) {
                                         return;
                                       }
-                                      await Navigator.pushAndRemoveUntil(
-                                        context,
-                                        PageTransition(
-                                          type: PageTransitionType.fade,
-                                          duration: Duration(milliseconds: 300),
-                                          reverseDuration:
-                                              Duration(milliseconds: 300),
-                                          child: NavBarPage(
-                                              initialPage: 'homePage'),
-                                        ),
-                                        (r) => false,
-                                      );
+
+                                      context.goNamedAuth('homePage', mounted);
                                     },
                                   ),
                                 ),
@@ -445,23 +424,14 @@ class _SignInWidgetState extends State<SignInWidget> {
                                       size: 16.0,
                                     ),
                                     onPressed: () async {
+                                      GoRouter.of(context).prepareAuthEvent();
                                       final user = await authManager
                                           .signInWithApple(context);
                                       if (user == null) {
                                         return;
                                       }
-                                      await Navigator.pushAndRemoveUntil(
-                                        context,
-                                        PageTransition(
-                                          type: PageTransitionType.fade,
-                                          duration: Duration(milliseconds: 300),
-                                          reverseDuration:
-                                              Duration(milliseconds: 300),
-                                          child: NavBarPage(
-                                              initialPage: 'homePage'),
-                                        ),
-                                        (r) => false,
-                                      );
+
+                                      context.goNamedAuth('homePage', mounted);
                                     },
                                   ),
                                 ),
@@ -481,16 +451,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                       size: 20.0,
                                     ),
                                     onPressed: () async {
-                                      await Navigator.push(
-                                        context,
-                                        PageTransition(
-                                          type: PageTransitionType.fade,
-                                          duration: Duration(milliseconds: 300),
-                                          reverseDuration:
-                                              Duration(milliseconds: 300),
-                                          child: PhoneSignInWidget(),
-                                        ),
-                                      );
+                                      context.pushNamed('phoneSignIn');
                                     },
                                   ),
                                 ),
@@ -505,15 +466,16 @@ class _SignInWidgetState extends State<SignInWidget> {
                                 hoverColor: Colors.transparent,
                                 highlightColor: Colors.transparent,
                                 onTap: () async {
-                                  await Navigator.push(
-                                    context,
-                                    PageTransition(
-                                      type: PageTransitionType.leftToRight,
-                                      duration: Duration(milliseconds: 400),
-                                      reverseDuration:
-                                          Duration(milliseconds: 400),
-                                      child: SignUpWidget(),
-                                    ),
+                                  context.pushNamed(
+                                    'signUp',
+                                    extra: <String, dynamic>{
+                                      kTransitionInfoKey: TransitionInfo(
+                                        hasTransition: true,
+                                        transitionType:
+                                            PageTransitionType.leftToRight,
+                                        duration: Duration(milliseconds: 400),
+                                      ),
+                                    },
                                   );
                                 },
                                 child: Row(
@@ -565,23 +527,14 @@ class _SignInWidgetState extends State<SignInWidget> {
                                 children: [
                                   FFButtonWidget(
                                     onPressed: () async {
+                                      GoRouter.of(context).prepareAuthEvent();
                                       final user = await authManager
                                           .signInAnonymously(context);
                                       if (user == null) {
                                         return;
                                       }
-                                      await Navigator.pushAndRemoveUntil(
-                                        context,
-                                        PageTransition(
-                                          type: PageTransitionType.fade,
-                                          duration: Duration(milliseconds: 300),
-                                          reverseDuration:
-                                              Duration(milliseconds: 300),
-                                          child: NavBarPage(
-                                              initialPage: 'homePage'),
-                                        ),
-                                        (r) => false,
-                                      );
+
+                                      context.goNamedAuth('homePage', mounted);
                                     },
                                     text: 'Continuar como convidado',
                                     options: FFButtonOptions(

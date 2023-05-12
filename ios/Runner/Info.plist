@@ -28,12 +28,24 @@
             <string>Editor</string>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>com.googleusercontent.apps.879632520696-co9aif5m9kj4s36bs8q02h2tg7g2fv6s</string>
+                <!--FF_REVERSED_CLIENT_ID-->
                 
             </array>
         </dict>
 
+        <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLName</key>
+        <string>grupogeld.com.br</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+        <string>sippe</string>
+        </array>
+        </dict>
     </array>
+    <key>FlutterDeepLinkingEnabled</key>
+    <true/>
 
 
 	<key>CFBundleVersion</key>

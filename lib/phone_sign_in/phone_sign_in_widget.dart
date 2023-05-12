@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/phone_verify/phone_verify_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -96,7 +95,7 @@ class _PhoneSignInWidgetState extends State<PhoneSignInWidget>
                   size: 30.0,
                 ),
                 onPressed: () async {
-                  Navigator.pop(context);
+                  context.pop();
                 },
               ),
               title: Text(
@@ -151,7 +150,7 @@ class _PhoneSignInWidgetState extends State<PhoneSignInWidget>
                                 size: 24.0,
                               ),
                               onPressed: () async {
-                                Navigator.pop(context);
+                                context.pop();
                               },
                             ),
                           ),
@@ -259,15 +258,10 @@ class _PhoneSignInWidgetState extends State<PhoneSignInWidget>
                           context: context,
                           phoneNumber: phoneNumberVal,
                           onCodeSent: () async {
-                            await Navigator.pushAndRemoveUntil(
-                              context,
-                              PageTransition(
-                                type: PageTransitionType.fade,
-                                duration: Duration(milliseconds: 300),
-                                reverseDuration: Duration(milliseconds: 300),
-                                child: PhoneVerifyWidget(),
-                              ),
-                              (r) => false,
+                            context.goNamedAuth(
+                              'phoneVerify',
+                              mounted,
+                              ignoreRedirect: true,
                             );
                           },
                         );

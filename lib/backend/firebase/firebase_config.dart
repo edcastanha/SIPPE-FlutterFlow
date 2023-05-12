@@ -5,13 +5,13 @@ Future initFirebase() async {
   if (kIsWeb) {
     await Firebase.initializeApp(
         options: FirebaseOptions(
-            apiKey: "AIzaSyD9kAA83JBdsknPkbXS97ZLICLUG5rZTF0",
-            authDomain: "facepresentrealtime.firebaseapp.com",
-            projectId: "facepresentrealtime",
-            storageBucket: "facepresentrealtime.appspot.com",
-            messagingSenderId: "879632520696",
-            appId: "1:879632520696:web:32d80e98a4a144790f720d",
-            measurementId: "G-QZK1T2QMDY"));
+            apiKey: "AIzaSyB8J_ADX_MyMwv8KWbheoJn9ZIgUi6NdmA",
+            authDomain: "api-sippe.firebaseapp.com",
+            projectId: "api-sippe",
+            storageBucket: "api-sippe.appspot.com",
+            messagingSenderId: "844575851549",
+            appId: "1:844575851549:web:97f421faf5022904def2f4",
+            measurementId: "G-4H5YXPRY9L"));
   } else {
     await Firebase.initializeApp();
   }

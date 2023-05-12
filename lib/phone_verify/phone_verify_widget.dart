@@ -3,7 +3,6 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import '/main.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -68,7 +67,7 @@ class _PhoneVerifyWidgetState extends State<PhoneVerifyWidget> {
                     size: 30.0,
                   ),
                   onPressed: () async {
-                    Navigator.pop(context);
+                    context.pop();
                   },
                 ),
                 title: Text(
@@ -123,7 +122,7 @@ class _PhoneVerifyWidgetState extends State<PhoneVerifyWidget> {
                                   size: 24.0,
                                 ),
                                 onPressed: () async {
-                                  Navigator.pop(context);
+                                  context.pop();
                                 },
                               ),
                             ),
@@ -198,6 +197,7 @@ class _PhoneVerifyWidgetState extends State<PhoneVerifyWidget> {
                           EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 44.0),
                       child: FFButtonWidget(
                         onPressed: () async {
+                          GoRouter.of(context).prepareAuthEvent();
                           final smsCodeVal = _model.pinCodeController!.text;
                           if (smsCodeVal == null || smsCodeVal.isEmpty) {
                             ScaffoldMessenger.of(context).showSnackBar(
@@ -216,16 +216,7 @@ class _PhoneVerifyWidgetState extends State<PhoneVerifyWidget> {
                             return;
                           }
 
-                          await Navigator.pushAndRemoveUntil(
-                            context,
-                            PageTransition(
-                              type: PageTransitionType.fade,
-                              duration: Duration(milliseconds: 300),
-                              reverseDuration: Duration(milliseconds: 300),
-                              child: NavBarPage(initialPage: 'homePage'),
-                            ),
-                            (r) => false,
-                          );
+                          context.goNamedAuth('homePage', mounted);
                         },
                         text: 'Confirmar e continuar',
                         options: FFButtonOptions(

@@ -2,24 +2,20 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CLIENT_ID</key>
-	<string>879632520696-co9aif5m9kj4s36bs8q02h2tg7g2fv6s.apps.googleusercontent.com</string>
-	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.879632520696-co9aif5m9kj4s36bs8q02h2tg7g2fv6s</string>
 	<key>ANDROID_CLIENT_ID</key>
-	<string>879632520696-75fhj1u150e39hjpibfd40o3a86alaru.apps.googleusercontent.com</string>
+	<string>844575851549-ntkukts6l6ja2dvld4103dmtdgjl0quk.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAJ8xas_1wogbCcYKzbH94PgFvpk6pmRIc</string>
+	<string>AIzaSyDzVUrLzQ74AoA9xRib_uKkbDoQ4EUetSs</string>
 	<key>GCM_SENDER_ID</key>
-	<string>879632520696</string>
+	<string>844575851549</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>br.com.grupogeld.sippe</string>
 	<key>PROJECT_ID</key>
-	<string>facepresentrealtime</string>
+	<string>api-sippe</string>
 	<key>STORAGE_BUCKET</key>
-	<string>facepresentrealtime.appspot.com</string>
+	<string>api-sippe.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,8 +27,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:879632520696:ios:e78eb348c50a19f50f720d</string>
-	<key>DATABASE_URL</key>
-	<string>https://facepresentrealtime-default-rtdb.firebaseio.com</string>
+	<string>1:844575851549:ios:e28a3b00ec78d07edef2f4</string>
 </dict>
 </plist>
