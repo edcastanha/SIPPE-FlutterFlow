@@ -7,7 +7,7 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:844575851549:android:2fb1c1c795b669b2def2f4",
+        "mobilesdk_app_id": "1:844575851549:android:8db5a5beaf3fdc18def2f4",
         "android_client_info": {
           "package_name": "br.com.grupogeld.sippe"
         }
@@ -31,8 +31,15 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "844575851549-guk1pohg70d4iv8jkeg5jvm2i6jbm4ke.apps.googleusercontent.com",
+              "client_id": "844575851549-6lm2dv53mk11fbpmkccq5294jbfc59fk.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "844575851549-7532e2p6hv0ihuc7k2sh8uflsoi67j7r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.grupogeld.sippe.docentes"
+              }
             }
           ]
         }

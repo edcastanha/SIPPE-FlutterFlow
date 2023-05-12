@@ -1,6 +1,6 @@
 {
-    "name": "SIPPE Brasil - Docentes",
-    "short_name": "SIPPE Brasil - Docentes",
+    "name": "SIPPE-Docentes",
+    "short_name": "SIPPE-Docentes",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

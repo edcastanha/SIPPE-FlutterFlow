@@ -1,4 +1,4 @@
-# SIPPE Brasil - Docentes
+# SIPPE-Docentes
 
 A new Flutter project.
 

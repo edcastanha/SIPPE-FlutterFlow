@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>SIPPE Brasil - Docentes</string>
+	<string>SIPPE - Docentes</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>SIPPE Brasil - Docentes</string>
+	<string>SIPPE-Docentes</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 
@@ -28,7 +28,7 @@
             <string>Editor</string>
             <key>CFBundleURLSchemes</key>
             <array>
-                <!--FF_REVERSED_CLIENT_ID-->
+                <string>com.googleusercontent.apps.844575851549-avplfhjo3a92dvc3e8nmlh12nor981r2</string>
                 
             </array>
         </dict>
@@ -37,10 +37,10 @@
         <key>CFBundleTypeRole</key>
         <string>Editor</string>
         <key>CFBundleURLName</key>
-        <string>grupogeld.com.br</string>
+        <string>s_i_p_p_e_docentes</string>
         <key>CFBundleURLSchemes</key>
         <array>
-        <string>sippe</string>
+        <string>br.com.grupogeld.sippe</string>
         </array>
         </dict>
     </array>
